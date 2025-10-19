@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-9a7396be8d7f9a942f47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QtCryptoAlgorithms",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QtCryptoAlgorithms::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtCryptoAlgorithms-Debug-8903d099046611b04c3c.json",
+					"name" : "QtCryptoAlgorithms",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QtCryptoAlgorithms_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtCryptoAlgorithms_autogen-Debug-f84f3bd2a87b1f0e9c43.json",
+					"name" : "QtCryptoAlgorithms_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QtCryptoAlgorithms_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtCryptoAlgorithms_autogen_timestamp_deps-Debug-d007119b8d4170e6f70f.json",
+					"name" : "QtCryptoAlgorithms_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug",
+		"source" : "D:/Qt projects/QtCryptoAlgorithms"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
