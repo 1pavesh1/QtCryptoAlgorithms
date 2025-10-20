@@ -1,0 +1,31 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "QtBigint_autogen_timestamp_deps::@c3dcb9e7292d5a60045a",
+	"isGeneratorProvided" : true,
+	"name" : "QtBigint_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "_deps/qt-secret-build/src/mini-gmp/src",
+		"source" : "build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

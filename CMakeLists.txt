@@ -11,6 +11,9 @@ qt_add_executable(QtCryptoAlgorithms
     ClientInterface.cpp
     ClientInterface.h
     ClientInterface.ui
+    CustomWidgets/MessageWidget.h
+    AbstractClasses/AnimationInterface.h AbstractClasses/CustomWidget.h
+    Enum/TypeMessage.h
 )
 
 target_link_libraries(QtCryptoAlgorithms
@@ -32,4 +35,15 @@ qt_generate_deploy_app_script(
     OUTPUT_SCRIPT deploy_script
     NO_UNSUPPORTED_PLATFORM_ERROR
 )
+
 install(SCRIPT ${deploy_script})
+
+include(FetchContent)
+
+FetchContent_Declare(
+  Qt-Secret
+  GIT_REPOSITORY https://github.com/QuasarApp/Qt-Secret
+  GIT_TAG        1.3.2
+)
+
+FetchContent_MakeAvailable(Qt-Secret)

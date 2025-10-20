@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/CMakeFiles/qt-secret-populate"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/CMakeFiles/qt-secret-populate.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/CMakeFiles/qt-secret-populate-complete.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-build.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-configure.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-download.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-install.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-patch.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-test.rule"
+		},
+		{
+			"file" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-subbuild/qt-secret-populate-prefix/src/qt-secret-populate-stamp/qt-secret-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"qt-secret-populate"
+		],
+		"name" : "qt-secret-populate"
+	}
+}
