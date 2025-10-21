@@ -16,12 +16,6 @@ qt_add_executable(QtCryptoAlgorithms
     Enum/TypeMessage.h
 )
 
-target_link_libraries(QtCryptoAlgorithms
-    PRIVATE
-        Qt::Core
-        Qt::Widgets
-)
-
 include(GNUInstallDirs)
 
 install(TARGETS QtCryptoAlgorithms
@@ -44,6 +38,15 @@ FetchContent_Declare(
   Qt-Secret
   GIT_REPOSITORY https://github.com/QuasarApp/Qt-Secret
   GIT_TAG        1.3.2
+)
+
+set(BUILD_SHARED_LIBS ON)
+target_link_libraries(QtCryptoAlgorithms
+    PRIVATE
+        Qt::Core
+        Qt::Widgets
+    PUBLIC
+        Qt-Secret
 )
 
 FetchContent_MakeAvailable(Qt-Secret)

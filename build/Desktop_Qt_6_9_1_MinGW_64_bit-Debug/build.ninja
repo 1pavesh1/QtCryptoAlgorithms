@@ -47,13 +47,13 @@ cmake_ninja_workdir = D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1
 #############################################
 # Order-only phony target for QtCryptoAlgorithms
 
-build cmake_object_order_depends_target_QtCryptoAlgorithms: phony || QtCryptoAlgorithms_autogen QtCryptoAlgorithms_autogen/mocs_compilation.cpp QtCryptoAlgorithms_autogen/timestamp QtCryptoAlgorithms_autogen_timestamp_deps
+build cmake_object_order_depends_target_QtCryptoAlgorithms: phony || QtCryptoAlgorithms_autogen QtCryptoAlgorithms_autogen/mocs_compilation.cpp QtCryptoAlgorithms_autogen/timestamp QtCryptoAlgorithms_autogen_timestamp_deps cmake_object_order_depends_target_Qt-Secret cmake_object_order_depends_target_QtBigint
 
 build CMakeFiles/QtCryptoAlgorithms.dir/QtCryptoAlgorithms_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__QtCryptoAlgorithms_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_QtCryptoAlgorithms
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\QtCryptoAlgorithms.dir\QtCryptoAlgorithms_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
-  INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/include" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui
+  INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/aesni" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\QtCryptoAlgorithms.dir
   OBJECT_FILE_DIR = CMakeFiles\QtCryptoAlgorithms.dir\QtCryptoAlgorithms_autogen
 
@@ -61,7 +61,7 @@ build CMakeFiles/QtCryptoAlgorithms.dir/main.cpp.obj: CXX_COMPILER__QtCryptoAlgo
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\QtCryptoAlgorithms.dir\main.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
-  INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/include" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui
+  INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/aesni" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\QtCryptoAlgorithms.dir
   OBJECT_FILE_DIR = CMakeFiles\QtCryptoAlgorithms.dir
 
@@ -69,7 +69,7 @@ build CMakeFiles/QtCryptoAlgorithms.dir/ClientInterface.cpp.obj: CXX_COMPILER__Q
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\QtCryptoAlgorithms.dir\ClientInterface.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
-  INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/include" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui
+  INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/aesni" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.9.1/mingw_64/include/QtWidgets -isystem D:/Qt/6.9.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\QtCryptoAlgorithms.dir
   OBJECT_FILE_DIR = CMakeFiles\QtCryptoAlgorithms.dir
 
@@ -81,10 +81,10 @@ build CMakeFiles/QtCryptoAlgorithms.dir/ClientInterface.cpp.obj: CXX_COMPILER__Q
 #############################################
 # Link the executable QtCryptoAlgorithms.exe
 
-build QtCryptoAlgorithms.exe: CXX_EXECUTABLE_LINKER__QtCryptoAlgorithms_Debug CMakeFiles/QtCryptoAlgorithms.dir/QtCryptoAlgorithms_autogen/mocs_compilation.cpp.obj CMakeFiles/QtCryptoAlgorithms.dir/main.cpp.obj CMakeFiles/QtCryptoAlgorithms.dir/ClientInterface.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a D$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a || QtCryptoAlgorithms_autogen QtCryptoAlgorithms_autogen_timestamp_deps
+build QtCryptoAlgorithms.exe: CXX_EXECUTABLE_LINKER__QtCryptoAlgorithms_Debug CMakeFiles/QtCryptoAlgorithms.dir/QtCryptoAlgorithms_autogen/mocs_compilation.cpp.obj CMakeFiles/QtCryptoAlgorithms.dir/main.cpp.obj CMakeFiles/QtCryptoAlgorithms.dir/ClientInterface.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a _deps/qt-secret-build/src/libQt-Secret.dll.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a D$:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a || QtCryptoAlgorithms_autogen QtCryptoAlgorithms_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
-  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a  _deps/qt-secret-build/src/libQt-Secret.dll.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\QtCryptoAlgorithms.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -162,7 +162,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 #############################################
 # Utility command for QtCryptoAlgorithms_autogen_timestamp_deps
 
-build QtCryptoAlgorithms_autogen_timestamp_deps: phony
+build QtCryptoAlgorithms_autogen_timestamp_deps: phony libQt-Secret.dll
 
 
 #############################################
@@ -174,7 +174,7 @@ build QtCryptoAlgorithms_autogen: phony CMakeFiles/QtCryptoAlgorithms_autogen Qt
 #############################################
 # Custom command for QtCryptoAlgorithms_autogen\timestamp
 
-build QtCryptoAlgorithms_autogen/timestamp QtCryptoAlgorithms_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}QtCryptoAlgorithms_autogen/timestamp ${cmake_ninja_workdir}QtCryptoAlgorithms_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || QtCryptoAlgorithms_autogen_timestamp_deps
+build QtCryptoAlgorithms_autogen/timestamp QtCryptoAlgorithms_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}QtCryptoAlgorithms_autogen/timestamp ${cmake_ninja_workdir}QtCryptoAlgorithms_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || QtCryptoAlgorithms_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/QtCryptoAlgorithms_autogen.dir/AutogenInfo.json" Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/timestamp" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/deps" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/d/262a0a4f56f706fc41c10724d76e6a058c5aa4375afb51cdd67a49fc775e6d71.d""
   DESC = Automatic MOC and UIC for target QtCryptoAlgorithms
   depfile = CMakeFiles\d\262a0a4f56f706fc41c10724d76e6a058c5aa4375afb51cdd67a49fc775e6d71.d
@@ -185,7 +185,7 @@ build QtCryptoAlgorithms_autogen/timestamp QtCryptoAlgorithms_autogen/mocs_compi
 #############################################
 # Phony custom command for CMakeFiles\QtCryptoAlgorithms_autogen
 
-build CMakeFiles/QtCryptoAlgorithms_autogen QtCryptoAlgorithms_autogen/include/ui_ClientInterface.h | ${cmake_ninja_workdir}CMakeFiles/QtCryptoAlgorithms_autogen ${cmake_ninja_workdir}QtCryptoAlgorithms_autogen/include/ui_ClientInterface.h: phony QtCryptoAlgorithms_autogen/timestamp || QtCryptoAlgorithms_autogen_timestamp_deps
+build CMakeFiles/QtCryptoAlgorithms_autogen QtCryptoAlgorithms_autogen/include/ui_ClientInterface.h | ${cmake_ninja_workdir}CMakeFiles/QtCryptoAlgorithms_autogen ${cmake_ninja_workdir}QtCryptoAlgorithms_autogen/include/ui_ClientInterface.h: phony QtCryptoAlgorithms_autogen/timestamp || QtCryptoAlgorithms_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -353,7 +353,7 @@ build _deps/qt-secret-build/src/mini-gmp/install/strip: phony _deps/qt-secret-bu
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target QtBigint
+# Object build statements for SHARED_LIBRARY target QtBigint
 
 
 #############################################
@@ -362,6 +362,7 @@ build _deps/qt-secret-build/src/mini-gmp/install/strip: phony _deps/qt-secret-bu
 build cmake_object_order_depends_target_QtBigint: phony || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/mocs_compilation.cpp _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/timestamp _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps
 
 build _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/QtBigint_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__QtBigint_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_QtBigint
+  DEFINES = -DQtBigint_EXPORTS
   DEP_FILE = _deps\qt-secret-build\src\mini-gmp\src\CMakeFiles\QtBigint.dir\QtBigint_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src"
@@ -369,6 +370,7 @@ build _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/QtBigint_au
   OBJECT_FILE_DIR = _deps\qt-secret-build\src\mini-gmp\src\CMakeFiles\QtBigint.dir\QtBigint_autogen
 
 build _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/bigint.cpp.obj: CXX_COMPILER__QtBigint_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src/bigint.cpp || cmake_object_order_depends_target_QtBigint
+  DEFINES = -DQtBigint_EXPORTS
   DEP_FILE = _deps\qt-secret-build\src\mini-gmp\src\CMakeFiles\QtBigint.dir\bigint.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src"
@@ -376,6 +378,7 @@ build _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/bigint.cpp.
   OBJECT_FILE_DIR = _deps\qt-secret-build\src\mini-gmp\src\CMakeFiles\QtBigint.dir
 
 build _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/mini-gmp.c.obj: CXX_COMPILER__QtBigint_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src/mini-gmp.c || cmake_object_order_depends_target_QtBigint
+  DEFINES = -DQtBigint_EXPORTS
   DEP_FILE = _deps\qt-secret-build\src\mini-gmp\src\CMakeFiles\QtBigint.dir\mini-gmp.c.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src"
@@ -384,19 +387,22 @@ build _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/mini-gmp.c.
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target QtBigint
+# Link build statements for SHARED_LIBRARY target QtBigint
 
 
 #############################################
-# Link the static library _deps\qt-secret-build\src\mini-gmp\src\libQtBigint.a
+# Link the shared library libQtBigint.dll
 
-build _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a: CXX_STATIC_LIBRARY_LINKER__QtBigint_Debug _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/QtBigint_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/bigint.cpp.obj _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/mini-gmp.c.obj || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps
+build libQtBigint.dll _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a: CXX_SHARED_LIBRARY_LINKER__QtBigint_Debug _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/QtBigint_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/bigint.cpp.obj _deps/qt-secret-build/src/mini-gmp/src/CMakeFiles/QtBigint.dir/mini-gmp.c.obj || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps
   LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\qt-secret-build\src\mini-gmp\src\CMakeFiles\QtBigint.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = _deps\qt-secret-build\src\mini-gmp\src\libQtBigint.a
-  TARGET_PDB = QtBigint.a.dbg
+  RESTAT = 1
+  TARGET_FILE = libQtBigint.dll
+  TARGET_IMPLIB = _deps\qt-secret-build\src\mini-gmp\src\libQtBigint.dll.a
+  TARGET_PDB = QtBigint.dll.dbg
 
 
 #############################################
@@ -531,9 +537,9 @@ build _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest.dir/tst_a
 #############################################
 # Link the executable QtBigintTest.exe
 
-build QtBigintTest.exe: CXX_EXECUTABLE_LINKER__QtBigintTest_Debug _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest.dir/QtBigintTest_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest.dir/tst_arithmetictests.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Test.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a || _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps
+build QtBigintTest.exe: CXX_EXECUTABLE_LINKER__QtBigintTest_Debug _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest.dir/QtBigintTest_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest.dir/tst_arithmetictests.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Test.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a || _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps libQtBigint.dll
   FLAGS = -DQT_QML_DEBUG -g
-  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Test.a  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Test.a  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\qt-secret-build\src\mini-gmp\tests\CMakeFiles\QtBigintTest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -629,7 +635,7 @@ build _deps/qt-secret-build/src/mini-gmp/tests/install/strip: phony _deps/qt-sec
 #############################################
 # Utility command for QtBigintTest_autogen_timestamp_deps
 
-build _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps: phony _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps: phony libQtBigint.dll
 
 
 #############################################
@@ -641,7 +647,7 @@ build _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen: phony _deps
 #############################################
 # Custom command for _deps\qt-secret-build\src\mini-gmp\tests\QtBigintTest_autogen\timestamp
 
-build _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps
+build _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\src\mini-gmp\tests" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen.dir/AutogenInfo.json" Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/tests" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/tests" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/deps" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/d/3b55c6016ebd90bd6e8d90983673438d00df48f9c9b16ec26ab7c95c4a452421.d""
   DESC = Automatic MOC and UIC for target QtBigintTest
   depfile = CMakeFiles\d\3b55c6016ebd90bd6e8d90983673438d00df48f9c9b16ec26ab7c95c4a452421.d
@@ -668,7 +674,7 @@ build _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/testQtBigint | ${cmake
 #############################################
 # Phony custom command for _deps\qt-secret-build\src\mini-gmp\tests\CMakeFiles\QtBigintTest_autogen
 
-build _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen: phony _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps
+build _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen: phony _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen/timestamp || _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/tests/QtBigintTest_autogen_timestamp_deps libQtBigint.dll
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -676,7 +682,7 @@ build _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen |
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Qt-Secret
+# Object build statements for SHARED_LIBRARY target Qt-Secret
 
 
 #############################################
@@ -685,7 +691,7 @@ build _deps/qt-secret-build/src/mini-gmp/tests/CMakeFiles/QtBigintTest_autogen |
 build cmake_object_order_depends_target_Qt-Secret: phony || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen/mocs_compilation.cpp _deps/qt-secret-build/src/Qt-Secret_autogen/timestamp _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps cmake_object_order_depends_target_QtBigint
 
 build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-Secret_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__Qt-Secret_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/Qt-Secret_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_Qt-Secret
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQt_SECRET_LIBRARY -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQt_SECRET_LIBRARY -DQt_Secret_EXPORTS -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = _deps\qt-secret-build\src\CMakeFiles\Qt-Secret.dir\Qt-Secret_autogen\mocs_compilation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/Qt-Secret_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/aesni" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++
@@ -693,7 +699,7 @@ build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-Secret_autogen/mocs_
   OBJECT_FILE_DIR = _deps\qt-secret-build\src\CMakeFiles\Qt-Secret.dir\Qt-Secret_autogen
 
 build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-AES/qaesencryption.cpp.obj: CXX_COMPILER__Qt-Secret_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/qaesencryption.cpp || cmake_object_order_depends_target_Qt-Secret
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQt_SECRET_LIBRARY -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQt_SECRET_LIBRARY -DQt_Secret_EXPORTS -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = _deps\qt-secret-build\src\CMakeFiles\Qt-Secret.dir\Qt-AES\qaesencryption.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/Qt-Secret_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/aesni" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++
@@ -701,7 +707,7 @@ build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-AES/qaesencryption.c
   OBJECT_FILE_DIR = _deps\qt-secret-build\src\CMakeFiles\Qt-Secret.dir\Qt-AES
 
 build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-RSA/qrsaencryption.cpp.obj: CXX_COMPILER__Qt-Secret_unscanned_Debug D$:/Qt$ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA/qrsaencryption.cpp || cmake_object_order_depends_target_Qt-Secret
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQt_SECRET_LIBRARY -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQt_SECRET_LIBRARY -DQt_Secret_EXPORTS -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = _deps\qt-secret-build\src\CMakeFiles\Qt-Secret.dir\Qt-RSA\qrsaencryption.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/Qt-Secret_autogen/include" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/aesni" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA" -I"D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src" -isystem D:/Qt/6.9.1/mingw_64/include/QtCore -isystem D:/Qt/6.9.1/mingw_64/include -isystem D:/Qt/6.9.1/mingw_64/mkspecs/win32-g++
@@ -710,19 +716,22 @@ build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-RSA/qrsaencryption.c
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Qt-Secret
+# Link build statements for SHARED_LIBRARY target Qt-Secret
 
 
 #############################################
-# Link the static library _deps\qt-secret-build\src\libQt-Secret.a
+# Link the shared library libQt-Secret.dll
 
-build _deps/qt-secret-build/src/libQt-Secret.a: CXX_STATIC_LIBRARY_LINKER__Qt-Secret_Debug _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-Secret_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-AES/qaesencryption.cpp.obj _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-RSA/qrsaencryption.cpp.obj || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build libQt-Secret.dll _deps/qt-secret-build/src/libQt-Secret.dll.a: CXX_SHARED_LIBRARY_LINKER__Qt-Secret_Debug _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-Secret_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-AES/qaesencryption.cpp.obj _deps/qt-secret-build/src/CMakeFiles/Qt-Secret.dir/Qt-RSA/qrsaencryption.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps libQtBigint.dll
   LANGUAGE_COMPILE_FLAGS = -DQT_QML_DEBUG -g
+  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a  -lmpr  -luserenv  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\qt-secret-build\src\CMakeFiles\Qt-Secret.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = _deps\qt-secret-build\src\libQt-Secret.a
-  TARGET_PDB = Qt-Secret.a.dbg
+  RESTAT = 1
+  TARGET_FILE = libQt-Secret.dll
+  TARGET_IMPLIB = _deps\qt-secret-build\src\libQt-Secret.dll.a
+  TARGET_PDB = Qt-Secret.dll.dbg
 
 
 #############################################
@@ -794,7 +803,7 @@ build _deps/qt-secret-build/src/install/strip: phony _deps/qt-secret-build/src/C
 #############################################
 # Utility command for Qt-Secret_autogen_timestamp_deps
 
-build _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps: phony _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps: phony libQtBigint.dll
 
 
 #############################################
@@ -806,7 +815,7 @@ build _deps/qt-secret-build/src/Qt-Secret_autogen: phony _deps/qt-secret-build/s
 #############################################
 # Custom command for _deps\qt-secret-build\src\Qt-Secret_autogen\timestamp
 
-build _deps/qt-secret-build/src/Qt-Secret_autogen/timestamp _deps/qt-secret-build/src/Qt-Secret_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/src/Qt-Secret_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/src/Qt-Secret_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/src/Qt-Secret_autogen/timestamp _deps/qt-secret-build/src/Qt-Secret_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/src/Qt-Secret_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/src/Qt-Secret_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\src" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/CMakeFiles/Qt-Secret_autogen.dir/AutogenInfo.json" Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/Qt-Secret_autogen/timestamp" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/Qt-Secret_autogen/deps" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/d/3d3420eb47d3e99111a8ac6afaedb7f693eb4d8bf4b24ac4fb0e8ab88f5d7be9.d""
   DESC = Automatic MOC and UIC for target Qt-Secret
   depfile = CMakeFiles\d\3d3420eb47d3e99111a8ac6afaedb7f693eb4d8bf4b24ac4fb0e8ab88f5d7be9.d
@@ -817,7 +826,7 @@ build _deps/qt-secret-build/src/Qt-Secret_autogen/timestamp _deps/qt-secret-buil
 #############################################
 # Phony custom command for _deps\qt-secret-build\src\CMakeFiles\Qt-Secret_autogen
 
-build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/src/CMakeFiles/Qt-Secret_autogen: phony _deps/qt-secret-build/src/Qt-Secret_autogen/timestamp || _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/src/CMakeFiles/Qt-Secret_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/src/CMakeFiles/Qt-Secret_autogen: phony _deps/qt-secret-build/src/Qt-Secret_autogen/timestamp || _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQtBigint.dll
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -857,9 +866,9 @@ build _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA.dir/main.cpp.obj:
 #############################################
 # Link the executable Qt-SecretTest_RSA.exe
 
-build Qt-SecretTest_RSA.exe: CXX_EXECUTABLE_LINKER__Qt-SecretTest_RSA_Debug _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA.dir/Qt-SecretTest_RSA_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA.dir/main.cpp.obj | _deps/qt-secret-build/src/libQt-Secret.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a || _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps
+build Qt-SecretTest_RSA.exe: CXX_EXECUTABLE_LINKER__Qt-SecretTest_RSA_Debug _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA.dir/Qt-SecretTest_RSA_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA.dir/main.cpp.obj | _deps/qt-secret-build/src/libQt-Secret.dll.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a || _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   FLAGS = -DQT_QML_DEBUG -g
-  LINK_LIBRARIES = _deps/qt-secret-build/src/libQt-Secret.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = _deps/qt-secret-build/src/libQt-Secret.dll.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\qt-secret-build\tests\CMakeFiles\Qt-SecretTest_RSA.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -916,9 +925,9 @@ build _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/Qt-SecretTest
 #############################################
 # Link the executable Qt-SecretTest_AES.exe
 
-build Qt-SecretTest_AES.exe: CXX_EXECUTABLE_LINKER__Qt-SecretTest_AES_Debug _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/Qt-SecretTest_AES_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/__/src/Qt-AES/main.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/__/src/Qt-AES/unit_test/aestest.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/Qt-SecretTest_AES_autogen/4G6LSYKWHB/qrc_res.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Test.a _deps/qt-secret-build/src/libQt-Secret.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a || _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps
+build Qt-SecretTest_AES.exe: CXX_EXECUTABLE_LINKER__Qt-SecretTest_AES_Debug _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/Qt-SecretTest_AES_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/__/src/Qt-AES/main.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/__/src/Qt-AES/unit_test/aestest.cpp.obj _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES.dir/Qt-SecretTest_AES_autogen/4G6LSYKWHB/qrc_res.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Test.a _deps/qt-secret-build/src/libQt-Secret.dll.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a || _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   FLAGS = -DQT_QML_DEBUG -g
-  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Test.a  _deps/qt-secret-build/src/libQt-Secret.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Test.a  _deps/qt-secret-build/src/libQt-Secret.dll.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\qt-secret-build\tests\CMakeFiles\Qt-SecretTest_AES.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -1020,7 +1029,7 @@ build _deps/qt-secret-build/tests/install/strip: phony _deps/qt-secret-build/tes
 #############################################
 # Utility command for Qt-SecretTest_RSA_autogen_timestamp_deps
 
-build _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps: phony _deps/qt-secret-build/src/libQt-Secret.a
+build _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps: phony libQt-Secret.dll
 
 
 #############################################
@@ -1032,7 +1041,7 @@ build _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen: phony _deps/qt-secr
 #############################################
 # Utility command for Qt-SecretTest_AES_autogen_timestamp_deps
 
-build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps: phony _deps/qt-secret-build/src/libQt-Secret.a
+build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps: phony libQt-Secret.dll
 
 
 #############################################
@@ -1044,7 +1053,7 @@ build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen: phony _deps/qt-secr
 #############################################
 # Custom command for _deps\qt-secret-build\tests\Qt-SecretTest_RSA_autogen\timestamp
 
-build _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps
+build _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\tests" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA_autogen.dir/AutogenInfo.json" Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/tests" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/deps" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/d/aa3be7a6ec4e47a9e5474ec3a27aa45bc00cf046932f611242788906c2e4caa7.d""
   DESC = Automatic MOC and UIC for target Qt-SecretTest_RSA
   depfile = CMakeFiles\d\aa3be7a6ec4e47a9e5474ec3a27aa45bc00cf046932f611242788906c2e4caa7.d
@@ -1055,7 +1064,7 @@ build _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp _deps/qt-s
 #############################################
 # Custom command for _deps\qt-secret-build\tests\Qt-SecretTest_AES_autogen\timestamp
 
-build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps
+build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\tests" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen.dir/AutogenInfo.json" Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/tests" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/deps" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/d/0f3eff744cb5ce481ed120a1bca123b18e7470d13e58e3d46f92135360d85213.d""
   DESC = Automatic MOC and UIC for target Qt-SecretTest_AES
   depfile = CMakeFiles\d\0f3eff744cb5ce481ed120a1bca123b18e7470d13e58e3d46f92135360d85213.d
@@ -1066,7 +1075,7 @@ build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp _deps/qt-s
 #############################################
 # Custom command for _deps\qt-secret-build\tests\Qt-SecretTest_AES_autogen\4G6LSYKWHB\qrc_res.cpp
 
-build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/4G6LSYKWHB/qrc_res.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/4G6LSYKWHB/qrc_res.cpp: CUSTOM_COMMAND _deps/qt-secret-src/src/Qt-AES/res.qrc _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen.dir/AutoRcc_res_4G6LSYKWHB_Info.json _deps/qt-secret-src/src/Qt-AES/unit_test/longText.txt D$:/Qt/6.9.1/mingw_64/bin/rcc.exe D$:/Qt/6.9.1/mingw_64/bin/rcc.exe || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps
+build _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/4G6LSYKWHB/qrc_res.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/4G6LSYKWHB/qrc_res.cpp: CUSTOM_COMMAND _deps/qt-secret-src/src/Qt-AES/res.qrc _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen.dir/AutoRcc_res_4G6LSYKWHB_Info.json _deps/qt-secret-src/src/Qt-AES/unit_test/longText.txt D$:/Qt/6.9.1/mingw_64/bin/rcc.exe D$:/Qt/6.9.1/mingw_64/bin/rcc.exe || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\tests" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen.dir/AutoRcc_res_4G6LSYKWHB_Info.json" Debug"
   DESC = Automatic RCC for ../src/Qt-AES/res.qrc
   restat = 1
@@ -1107,13 +1116,13 @@ build _deps/qt-secret-build/tests/CMakeFiles/testQt-SecretAES | ${cmake_ninja_wo
 #############################################
 # Phony custom command for _deps\qt-secret-build\tests\CMakeFiles\Qt-SecretTest_RSA_autogen
 
-build _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA_autogen: phony _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps
+build _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_RSA_autogen: phony _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen/timestamp || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/tests/Qt-SecretTest_RSA_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
 
 
 #############################################
 # Phony custom command for _deps\qt-secret-build\tests\CMakeFiles\Qt-SecretTest_AES_autogen
 
-build _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen: phony _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps
+build _deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/tests/CMakeFiles/Qt-SecretTest_AES_autogen: phony _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen/timestamp || _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/tests/Qt-SecretTest_AES_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1177,9 +1186,9 @@ build _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/Qt-Secret
 #############################################
 # Link the executable Qt-Secret-GUI.exe
 
-build Qt-Secret-GUI.exe: CXX_EXECUTABLE_LINKER__Qt-Secret-GUI_Debug _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/Qt-Secret-GUI_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/appcore.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/main.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/secretworker.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_qml.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Quick.a _deps/qt-secret-build/src/libQt-Secret.a D$:/Qt/6.9.1/mingw_64/lib/libQt6QmlMeta.a D$:/Qt/6.9.1/mingw_64/lib/libQt6QmlWorkerScript.a D$:/Qt/6.9.1/mingw_64/lib/libQt6QmlModels.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Qml.a D$:/Qt/6.9.1/mingw_64/lib/libQt6OpenGL.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Network.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build Qt-Secret-GUI.exe: CXX_EXECUTABLE_LINKER__Qt-Secret-GUI_Debug _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/Qt-Secret-GUI_autogen/mocs_compilation.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/appcore.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/main.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/secretworker.cpp.obj _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI.dir/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_qml.cpp.obj | D$:/Qt/6.9.1/mingw_64/lib/libQt6Quick.a _deps/qt-secret-build/src/libQt-Secret.dll.a D$:/Qt/6.9.1/mingw_64/lib/libQt6QmlMeta.a D$:/Qt/6.9.1/mingw_64/lib/libQt6QmlWorkerScript.a D$:/Qt/6.9.1/mingw_64/lib/libQt6QmlModels.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Qml.a D$:/Qt/6.9.1/mingw_64/lib/libQt6OpenGL.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Network.a D$:/Qt/6.9.1/mingw_64/lib/libQt6Core.a _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   FLAGS = -DQT_QML_DEBUG -g
-  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Quick.a  _deps/qt-secret-build/src/libQt-Secret.a  D:/Qt/6.9.1/mingw_64/lib/libQt6QmlMeta.a  D:/Qt/6.9.1/mingw_64/lib/libQt6QmlWorkerScript.a  D:/Qt/6.9.1/mingw_64/lib/libQt6QmlModels.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Qml.a  -lshell32  D:/Qt/6.9.1/mingw_64/lib/libQt6OpenGL.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -luser32  D:/Qt/6.9.1/mingw_64/lib/libQt6Network.a  -lws2_32  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = D:/Qt/6.9.1/mingw_64/lib/libQt6Quick.a  _deps/qt-secret-build/src/libQt-Secret.dll.a  D:/Qt/6.9.1/mingw_64/lib/libQt6QmlMeta.a  D:/Qt/6.9.1/mingw_64/lib/libQt6QmlWorkerScript.a  D:/Qt/6.9.1/mingw_64/lib/libQt6QmlModels.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Qml.a  -lshell32  D:/Qt/6.9.1/mingw_64/lib/libQt6OpenGL.a  D:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -luser32  D:/Qt/6.9.1/mingw_64/lib/libQt6Network.a  -lws2_32  D:/Qt/6.9.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\qt-secret-build\Qt-Secret-GUI\CMakeFiles\Qt-Secret-GUI.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -1257,7 +1266,7 @@ build _deps/qt-secret-build/Qt-Secret-GUI/install/strip: phony _deps/qt-secret-b
 #############################################
 # Utility command for Qt-Secret-GUI_autogen_timestamp_deps
 
-build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps: phony _deps/qt-secret-build/src/libQt-Secret.a
+build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps: phony libQt-Secret.dll
 
 
 #############################################
@@ -1269,7 +1278,7 @@ build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen: phony _deps/qt-
 #############################################
 # Custom command for _deps\qt-secret-build\Qt-Secret-GUI\Qt-Secret-GUI_autogen\timestamp
 
-build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/mocs_compilation.cpp: CUSTOM_COMMAND D$:/Qt/6.9.1/mingw_64/bin/moc.exe D$:/Qt/6.9.1/mingw_64/bin/uic.exe || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\Qt-Secret-GUI" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen.dir/AutogenInfo.json" Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_transform_depfile Ninja gccdepfile "D:/Qt projects/QtCryptoAlgorithms" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/Qt-Secret-GUI" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/Qt-Secret-GUI" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/deps" "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/d/2d3426683c035f97ef4c9e4f21c28a35cd58efa93032a219204d3c493e2f5f8d.d""
   DESC = Automatic MOC and UIC for target Qt-Secret-GUI
   depfile = CMakeFiles\d\2d3426683c035f97ef4c9e4f21c28a35cd58efa93032a219204d3c493e2f5f8d.d
@@ -1280,7 +1289,7 @@ build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp _deps/
 #############################################
 # Custom command for _deps\qt-secret-build\Qt-Secret-GUI\Qt-Secret-GUI_autogen\EWIEGA46WW\qrc_qml.cpp
 
-build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_qml.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_qml.cpp: CUSTOM_COMMAND _deps/qt-secret-src/Qt-Secret-GUI/qml.qrc _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json _deps/qt-secret-src/Qt-Secret-GUI/DigitalSignaturePage.qml _deps/qt-secret-src/Qt-Secret-GUI/EncryptDecryptPage.qml _deps/qt-secret-src/Qt-Secret-GUI/qtquickcontrols2.conf _deps/qt-secret-src/Qt-Secret-GUI/KeysGeneratePage.qml _deps/qt-secret-src/Qt-Secret-GUI/main.qml _deps/qt-secret-src/Qt-Secret-GUI/images/clear.png _deps/qt-secret-src/Qt-Secret-GUI/images/cpy.png _deps/qt-secret-src/Qt-Secret-GUI/modules/LabledText.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/ActionButton.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/RowElement.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/RsaGenModule.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/LoadPopup.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/DoubleStateMenu.qml D$:/Qt/6.9.1/mingw_64/bin/rcc.exe D$:/Qt/6.9.1/mingw_64/bin/rcc.exe || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_qml.cpp | ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_qml.cpp: CUSTOM_COMMAND _deps/qt-secret-src/Qt-Secret-GUI/qml.qrc _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json _deps/qt-secret-src/Qt-Secret-GUI/DigitalSignaturePage.qml _deps/qt-secret-src/Qt-Secret-GUI/EncryptDecryptPage.qml _deps/qt-secret-src/Qt-Secret-GUI/qtquickcontrols2.conf _deps/qt-secret-src/Qt-Secret-GUI/KeysGeneratePage.qml _deps/qt-secret-src/Qt-Secret-GUI/main.qml _deps/qt-secret-src/Qt-Secret-GUI/images/clear.png _deps/qt-secret-src/Qt-Secret-GUI/images/cpy.png _deps/qt-secret-src/Qt-Secret-GUI/modules/LabledText.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/ActionButton.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/RowElement.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/RsaGenModule.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/LoadPopup.qml _deps/qt-secret-src/Qt-Secret-GUI/modules/DoubleStateMenu.qml D$:/Qt/6.9.1/mingw_64/bin/rcc.exe D$:/Qt/6.9.1/mingw_64/bin/rcc.exe || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Qt projects\QtCryptoAlgorithms\build\Desktop_Qt_6_9_1_MinGW_64_bit-Debug\_deps\qt-secret-build\Qt-Secret-GUI" && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen.dir/AutoRcc_qml_EWIEGA46WW_Info.json" Debug"
   DESC = Automatic RCC for qml.qrc
   restat = 1
@@ -1289,12 +1298,12 @@ build _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/EWIEGA46WW/qrc_q
 #############################################
 # Phony custom command for _deps\qt-secret-build\Qt-Secret-GUI\CMakeFiles\Qt-Secret-GUI_autogen
 
-build _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen: phony _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/libQt-Secret.a _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen | ${cmake_ninja_workdir}_deps/qt-secret-build/Qt-Secret-GUI/CMakeFiles/Qt-Secret-GUI_autogen: phony _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen/timestamp || _deps/qt-secret-build/Qt-Secret-GUI/Qt-Secret-GUI_autogen_timestamp_deps _deps/qt-secret-build/src/Qt-Secret_autogen _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen _deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen_timestamp_deps libQt-Secret.dll libQtBigint.dll
 
 # =============================================================================
 # Target aliases.
 
-build Qt-Secret: phony _deps/qt-secret-build/src/libQt-Secret.a
+build Qt-Secret: phony libQt-Secret.dll
 
 build Qt-Secret-GUI: phony Qt-Secret-GUI.exe
 
@@ -1318,7 +1327,7 @@ build Qt-Secret_autogen: phony _deps/qt-secret-build/src/Qt-Secret_autogen
 
 build Qt-Secret_autogen_timestamp_deps: phony _deps/qt-secret-build/src/Qt-Secret_autogen_timestamp_deps
 
-build QtBigint: phony _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build QtBigint: phony libQtBigint.dll
 
 build QtBigintTest: phony QtBigintTest.exe
 
@@ -1341,10 +1350,6 @@ build deployTestQt-SecretRSA: phony _deps/qt-secret-build/tests/deployTestQt-Sec
 build deployTestQtBigint: phony _deps/qt-secret-build/src/mini-gmp/tests/deployTestQtBigint
 
 build doc: phony _deps/qt-secret-build/src/mini-gmp/doc
-
-build libQt-Secret.a: phony _deps/qt-secret-build/src/libQt-Secret.a
-
-build libQtBigint.a: phony _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
 
 build release: phony _deps/qt-secret-build/src/mini-gmp/release
 
@@ -1385,7 +1390,7 @@ build _deps/qt-secret-build/Qt-Secret-GUI/all: phony Qt-Secret-GUI.exe
 #############################################
 # Folder: D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src
 
-build _deps/qt-secret-build/src/all: phony _deps/qt-secret-build/src/libQt-Secret.a
+build _deps/qt-secret-build/src/all: phony libQt-Secret.dll
 
 # =============================================================================
 
@@ -1399,7 +1404,7 @@ build _deps/qt-secret-build/src/mini-gmp/all: phony _deps/qt-secret-build/src/mi
 #############################################
 # Folder: D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src
 
-build _deps/qt-secret-build/src/mini-gmp/src/all: phony _deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a
+build _deps/qt-secret-build/src/mini-gmp/src/all: phony libQtBigint.dll
 
 # =============================================================================
 

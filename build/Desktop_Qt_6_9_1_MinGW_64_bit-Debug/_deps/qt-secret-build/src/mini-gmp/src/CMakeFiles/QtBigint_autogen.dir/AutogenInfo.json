@@ -32,7 +32,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/include",
 	"MOC_COMPILATION_FILE" : "D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src/QtBigint_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [],
+	"MOC_DEFINITIONS" : [ "QtBigint_EXPORTS" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[

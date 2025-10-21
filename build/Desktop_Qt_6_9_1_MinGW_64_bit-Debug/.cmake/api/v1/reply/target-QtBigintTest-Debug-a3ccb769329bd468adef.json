@@ -198,11 +198,11 @@
 			"id" : "QtBigint::@c3dcb9e7292d5a60045a"
 		},
 		{
-			"id" : "QtBigintTest_autogen_timestamp_deps::@49b8716f29b1ab03523c"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "QtBigintTest_autogen::@49b8716f29b1ab03523c"
+		},
+		{
+			"id" : "QtBigintTest_autogen_timestamp_deps::@49b8716f29b1ab03523c"
 		}
 	],
 	"id" : "QtBigintTest::@49b8716f29b1ab03523c",
@@ -225,7 +225,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "_deps\\qt-secret-build\\src\\mini-gmp\\src\\libQtBigint.a",
+				"fragment" : "_deps\\qt-secret-build\\src\\mini-gmp\\src\\libQtBigint.dll.a",
 				"role" : "libraries"
 			},
 			{

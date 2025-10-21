@@ -1,9 +1,14 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/qt-secret-build/src/mini-gmp/src/libQtBigint.a"
+			"path" : "libQtBigint.dll"
+		},
+		{
+			"path" : "_deps/qt-secret-build/src/mini-gmp/src/libQtBigint.dll.a"
+		},
+		{
+			"path" : "libQtBigint.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -46,6 +51,12 @@
 					"fragment" : "-DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"define" : "QtBigint_EXPORTS"
+				}
+			],
 			"includes" : 
 			[
 				{
@@ -77,16 +88,31 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "QtBigint_autogen_timestamp_deps::@c3dcb9e7292d5a60045a"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "QtBigint_autogen::@c3dcb9e7292d5a60045a"
+		},
+		{
+			"id" : "QtBigint_autogen_timestamp_deps::@c3dcb9e7292d5a60045a"
 		}
 	],
 	"id" : "QtBigint::@c3dcb9e7292d5a60045a",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
 	"name" : "QtBigint",
-	"nameOnDisk" : "libQtBigint.a",
+	"nameOnDisk" : "libQtBigint.dll",
 	"paths" : 
 	{
 		"build" : "_deps/qt-secret-build/src/mini-gmp/src",
@@ -152,5 +178,5 @@
 			"sourceGroupIndex" : 2
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "SHARED_LIBRARY"
 }

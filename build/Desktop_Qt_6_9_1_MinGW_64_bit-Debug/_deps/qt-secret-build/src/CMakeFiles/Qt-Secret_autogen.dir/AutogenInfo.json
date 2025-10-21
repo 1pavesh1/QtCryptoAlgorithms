@@ -36,6 +36,7 @@
 		"MINGW_HAS_SECURE_API=1",
 		"QT_CORE_LIB",
 		"Qt_SECRET_LIBRARY",
+		"Qt_Secret_EXPORTS",
 		"UNICODE",
 		"WIN32",
 		"WIN64",
