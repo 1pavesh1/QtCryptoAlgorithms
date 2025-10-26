@@ -4,8 +4,15 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt\ projects/QtCryptoAlgorithms/CMakeLists.txt \
 	D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.cpp \
 	D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AES.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/Blowfish.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/DES.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSA.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/Timer/SpeedTimer.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
@@ -14,6 +21,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/moc_predefs.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/main.cpp \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/QDebug \
+	D:/Qt/6.9.1/mingw_64/include/QtCore/QElapsedTimer \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/QPropertyAnimation \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/QTimer \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \

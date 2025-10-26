@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Disable tests
+BUILD_TESTING:BOOL=OFF
+
 //Path to a program.
 CCACHE_PROGRAM:FILEPATH=CCACHE_PROGRAM-NOTFOUND
 
@@ -296,6 +299,10 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 FETCHCONTENT_QUIET:BOOL=ON
 
 //When not empty, overrides where to find pre-populated content
+// for json
+FETCHCONTENT_SOURCE_DIR_JSON:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for Qt-Secret
 FETCHCONTENT_SOURCE_DIR_QT-SECRET:PATH=
 
@@ -305,6 +312,9 @@ FETCHCONTENT_SOURCE_DIR_QTSECRET:PATH=
 
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of json
+FETCHCONTENT_UPDATES_DISCONNECTED_JSON:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of Qt-Secret
 FETCHCONTENT_UPDATES_DISCONNECTED_QT-SECRET:BOOL=OFF
@@ -343,11 +353,14 @@ QT_MAINTENANCE_TOOL:FILEPATH=D:/Qt/MaintenanceTool.exe
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=D:/Qt/6.9.1/mingw_64/bin/qmake.exe
 
+//Disable Qt-Secret tests
+QT_SECRET_BUILD_TESTING:BOOL=OFF
+
 //Path to a program.
 Q_MAKE_EXE:FILEPATH=D:/Qt/6.9.1/mingw_64/bin/qmake.exe
 
 //Value Computed by CMake
-Qt-Secret_BINARY_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Qt-Secret
+Qt-Secret_BINARY_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build
 
 //Value Computed by CMake
 Qt-Secret_IS_TOP_LEVEL:STATIC=OFF
@@ -356,7 +369,7 @@ Qt-Secret_IS_TOP_LEVEL:STATIC=OFF
 Qt-Secret_LIB_DEPENDS:STATIC=general;Qt6::Core;general;QtBigint;
 
 //Value Computed by CMake
-Qt-Secret_SOURCE_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/Qt-Secret
+Qt-Secret_SOURCE_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src
 
 //The directory containing a CMake configuration file for Qt6ConcurrentPrivate.
 Qt6ConcurrentPrivate_DIR:PATH=D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6ConcurrentPrivate
@@ -473,13 +486,13 @@ Qt6ZlibPrivate_DIR:PATH=D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6ZlibPrivate
 Qt6_DIR:PATH=D:/Qt/6.9.1/mingw_64/lib/cmake/Qt6
 
 //Value Computed by CMake
-QtBigint_BINARY_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/Qt-Secret/src/mini-gmp/src
+QtBigint_BINARY_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-build/src/mini-gmp/src
 
 //Value Computed by CMake
 QtBigint_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-QtBigint_SOURCE_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/Qt-Secret/src/mini-gmp/src
+QtBigint_SOURCE_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src
 
 //Value Computed by CMake
 QtCryptoAlgorithms_BINARY_DIR:STATIC=D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug
@@ -624,7 +637,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

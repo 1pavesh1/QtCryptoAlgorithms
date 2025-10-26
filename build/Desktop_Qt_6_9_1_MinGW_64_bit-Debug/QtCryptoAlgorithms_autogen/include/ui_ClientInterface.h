@@ -73,8 +73,13 @@ public:
 "	padding: 10px;\n"
 "}"));
         alghoritmsCryptComboBox = new QComboBox(centralwidget);
+        alghoritmsCryptComboBox->addItem(QString());
+        alghoritmsCryptComboBox->addItem(QString());
+        alghoritmsCryptComboBox->addItem(QString());
+        alghoritmsCryptComboBox->addItem(QString());
+        alghoritmsCryptComboBox->addItem(QString());
         alghoritmsCryptComboBox->setObjectName("alghoritmsCryptComboBox");
-        alghoritmsCryptComboBox->setGeometry(QRect(10, 10, 481, 31));
+        alghoritmsCryptComboBox->setGeometry(QRect(10, 0, 481, 41));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Arial")});
         alghoritmsCryptComboBox->setFont(font1);
@@ -138,7 +143,7 @@ public:
 "}"));
         frame = new QFrame(centralwidget);
         frame->setObjectName("frame");
-        frame->setGeometry(QRect(500, 10, 491, 81));
+        frame->setGeometry(QRect(500, 0, 491, 91));
         frame->setFrameShape(QFrame::Shape::StyledPanel);
         frame->setFrameShadow(QFrame::Shadow::Raised);
         timeToCrypt = new QLabel(centralwidget);
@@ -191,6 +196,12 @@ public:
     void retranslateUi(QMainWindow *ClientInterface)
     {
         ClientInterface->setWindowTitle(QCoreApplication::translate("ClientInterface", "\320\250\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\320\265", nullptr));
+        alghoritmsCryptComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "AES", nullptr));
+        alghoritmsCryptComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "Blowfish", nullptr));
+        alghoritmsCryptComboBox->setItemText(2, QCoreApplication::translate("ClientInterface", "DES", nullptr));
+        alghoritmsCryptComboBox->setItemText(3, QCoreApplication::translate("ClientInterface", "RSA", nullptr));
+        alghoritmsCryptComboBox->setItemText(4, QCoreApplication::translate("ClientInterface", "XTEA", nullptr));
+
         toCryptPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\227\320\260\321\210\320\270\321\204\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
         timeToCrypt->setText(QCoreApplication::translate("ClientInterface", "\320\222\321\200\320\265\320\274\321\217 \321\210\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\321\217:", nullptr));
         textToCrypt->setText(QCoreApplication::translate("ClientInterface", "\320\242\320\265\320\272\321\201\321\202 \320\264\320\273\321\217 \321\210\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\321\217:", nullptr));

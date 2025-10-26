@@ -370,15 +370,57 @@
 			null
 		],
 		[
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/AES.h",
+			"MU",
+			"RNZX3BCWSN/moc_AES.cpp",
+			null
+		],
+		[
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/Blowfish.h",
+			"MU",
+			"RNZX3BCWSN/moc_Blowfish.cpp",
+			null
+		],
+		[
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/DES.h",
+			"MU",
+			"RNZX3BCWSN/moc_DES.cpp",
+			null
+		],
+		[
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/RSA.h",
+			"MU",
+			"RNZX3BCWSN/moc_RSA.cpp",
+			null
+		],
+		[
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h",
+			"MU",
+			"RNZX3BCWSN/moc_XTEA.cpp",
+			null
+		],
+		[
 			"D:/Qt projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h",
 			"MU",
 			"E56A3JMRPG/moc_MessageWidget.cpp",
 			null
 		],
 		[
+			"D:/Qt projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h",
+			"MU",
+			"QFPTDX5X5T/moc_TypeAlgorithm.cpp",
+			null
+		],
+		[
 			"D:/Qt projects/QtCryptoAlgorithms/Enum/TypeMessage.h",
 			"MU",
 			"QFPTDX5X5T/moc_TypeMessage.cpp",
+			null
+		],
+		[
+			"D:/Qt projects/QtCryptoAlgorithms/Timer/SpeedTimer.h",
+			"MU",
+			"H3KQXJXU73/moc_SpeedTimer.cpp",
 			null
 		]
 	],

@@ -14,6 +14,14 @@ qt_add_executable(QtCryptoAlgorithms
     CustomWidgets/MessageWidget.h
     AbstractClasses/AnimationInterface.h AbstractClasses/CustomWidget.h
     Enum/TypeMessage.h
+    CryptoAlgorithms/RSA.h
+    CryptoAlgorithms/AES.h
+    CryptoAlgorithms/XTEA.h
+    CryptoAlgorithms/Blowfish.h
+    CryptoAlgorithms/DES.h
+    Timer/SpeedTimer.h
+    Enum/TypeAlgorithm.h
+
 )
 
 include(GNUInstallDirs)

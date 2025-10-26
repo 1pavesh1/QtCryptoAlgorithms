@@ -413,8 +413,18 @@ D:/Qt projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h
 D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h
 D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mmc:Q_OBJECT
+ mdp:D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/AnimationInterface.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/Enum/TypeMessage.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/Timer/SpeedTimer.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/moc_predefs.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QDebug
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QElapsedTimer
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QPropertyAnimation
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QTimer
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h
@@ -422,6 +432,8 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q20type_traits.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q20utility.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q23utility.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qabstractanimation.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qabstracteventdispatcher.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qalgorithms.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qanystringview.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qarraydata.h
@@ -431,6 +443,7 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qatomic.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qbasictimer.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qbindingstorage.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qbytearray.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -449,8 +462,12 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qcontiguouscache.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qdatastream.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qdeadlinetimer.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qdebug.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qeasingcurve.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qelapsedtimer.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qeventloop.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qflags.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qfloat16.h
@@ -462,6 +479,7 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qglobalstatic.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qhash.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qiodevice.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qiodevicebase.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qiterable.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qiterator.h
@@ -486,6 +504,7 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qpair.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qprocessordetection.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qpropertyanimation.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qrect.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qrefcount.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qscopedpointer.h
@@ -524,6 +543,7 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtextstream.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtformat_impl.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtimer.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtmetamacros.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtnoop.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -534,12 +554,17 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtversionchecks.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtypeinfo.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qtypes.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qurl.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qutf8stringview.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qvariantanimation.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/QPainter
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/QPainterPath
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/QPixmap
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h
@@ -553,20 +578,38 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpainterpath.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpicture.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qpolygon.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/QGraphicsOpacityEffect
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/QHBoxLayout
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/QLabel
  mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/QVBoxLayout
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qboxlayout.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qframe.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qgraphicseffect.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlabel.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayout.h
+ mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h
@@ -789,3 +832,11 @@ D:/Qt projects/QtCryptoAlgorithms/main.cpp
 D:/Qt projects/QtCryptoAlgorithms/Enum/TypeMessage.h
 D:/Qt projects/QtCryptoAlgorithms/ClientInterface.cpp
  uic:ui_ClientInterface.h
+D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/AES.h
+D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/Blowfish.h
+D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/DES.h
+D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/RSA.h
+D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h
+D:/Qt projects/QtCryptoAlgorithms/Timer/SpeedTimer.h
+D:/Qt projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h
+D:/Qt projects/QtCryptoAlgorithms/Editor/TextEditor.h
