@@ -88,11 +88,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "QtBigint_autogen_timestamp_deps::@c3dcb9e7292d5a60045a"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "QtBigint_autogen::@c3dcb9e7292d5a60045a"
+		},
+		{
+			"id" : "QtBigint_autogen_timestamp_deps::@c3dcb9e7292d5a60045a"
 		}
 	],
 	"id" : "QtBigint::@c3dcb9e7292d5a60045a",

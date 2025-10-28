@@ -2,9 +2,15 @@
 #define CLIENTINTERFACE_H
 
 #include <QMainWindow>
+#include <QByteArray>
 #include "CustomWidgets/MessageWidget.h"
 #include "Enum/TypeAlgorithm.h"
 #include "Timer/SpeedTimer.h"
+#include "CryptoAlgorithms/AES.h"
+#include "CryptoAlgorithms/Blowfish.h"
+#include "CryptoAlgorithms/DES.h"
+#include "CryptoAlgorithms/RSA.h"
+#include "CryptoAlgorithms/XTEA.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,26 +33,42 @@ private slots:
 
     void on_alghoritmsCryptComboBox_currentIndexChanged(int index);
 
+    void on_generateRSAKeyPushButton_clicked();
+
+    void on_clearRSAKeysPushButton_clicked();
+
+    void on_formatHEXCheckBox_stateChanged(int arg1);
+
+    void on_formatBase64CheckBox_stateChanged(int arg1);
+
 private:
     Ui::ClientInterface *ui;
     MessageWidget *messageWidget;
     TypeAlghorithm typeAlghorithm = AES;
-    QList <QString> listWords;
     SpeedTimer timer;
 
-    void EncryptMsg(const QString &msg);
-    void DecryptMsg(const QString &msg);
+    AESEncryptor        aesEncryptor;
+    BlowfishEncryptor   blowfishEncryptor;
+    DESEncryptor        desEncryptor;
+    RSAEncryptor        rsaEncryptor;
+    XTEAEncryptor       xteaEncryptor;
 
-    void EncryptAES(const QList <QString> &listWords);
-    void EncryptBlowfish(const QList <QString> &listWords);
-    void EncryptDES(const QList <QString> &listWords);
-    void EncryptRSA(const QList <QString> &listWords);
-    void EncryptXTEA(const QList <QString> &listWords);
+    void UpdateInterfaceFrame(const TypeAlghorithm &typeAlghorithm);
+    void ClearInterfaceFrame();
 
-    void DecryptAES(const QList <QString> &listWords);
-    void DecryptBlowfish(const QList <QString> &listWords);
-    void DecryptDES(const QList <QString> &listWords);
-    void DecryptRSA(const QList <QString> &listWords);
-    void DecryptXTEA(const QList <QString> &listWords);
+    void EncryptMsg(const QByteArray &message);
+    void DecryptMsg(const QByteArray &message);
+
+    void EncryptAES(const QByteArray &message);
+    void EncryptBlowfish(const QByteArray &message);
+    void EncryptDES(const QByteArray &message);
+    void EncryptRSA(const QByteArray &message);
+    void EncryptXTEA(const QByteArray &message);
+
+    void DecryptAES(const QByteArray &message);
+    void DecryptBlowfish(const QByteArray &message);
+    void DecryptDES(const QByteArray &message);
+    void DecryptRSA(const QByteArray &message);
+    void DecryptXTEA(const QByteArray &message);
 };
 #endif // CLIENTINTERFACE_H

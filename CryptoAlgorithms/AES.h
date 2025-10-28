@@ -4,18 +4,12 @@
 #include <QString>
 #include "qaesencryption.h"
 
-class AES
+class AESEncryptor
 {
+private:
+
 public:
-    QString EncryptMsg(const QList <QString> &listWords)
-    {
 
-    }
-
-    QString DecryptMsg(const QList <QString> &listWords)
-    {
-
-    }
 };
 
 #endif // AES_H

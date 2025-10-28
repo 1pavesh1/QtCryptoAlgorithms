@@ -44,7 +44,12 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         "",
         "on_fromCryptPushButton_clicked",
         "on_alghoritmsCryptComboBox_currentIndexChanged",
-        "index"
+        "index",
+        "on_generateRSAKeyPushButton_clicked",
+        "on_clearRSAKeysPushButton_clicked",
+        "on_formatHEXCheckBox_stateChanged",
+        "arg1",
+        "on_formatBase64CheckBox_stateChanged"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -55,6 +60,18 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         // Slot 'on_alghoritmsCryptComboBox_currentIndexChanged'
         QtMocHelpers::SlotData<void(int)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::Int, 5 },
+        }}),
+        // Slot 'on_generateRSAKeyPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_clearRSAKeysPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_formatHEXCheckBox_stateChanged'
+        QtMocHelpers::SlotData<void(int)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 9 },
+        }}),
+        // Slot 'on_formatBase64CheckBox_stateChanged'
+        QtMocHelpers::SlotData<void(int)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 9 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -82,6 +99,10 @@ void ClientInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->on_toCryptPushButton_clicked(); break;
         case 1: _t->on_fromCryptPushButton_clicked(); break;
         case 2: _t->on_alghoritmsCryptComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 3: _t->on_generateRSAKeyPushButton_clicked(); break;
+        case 4: _t->on_clearRSAKeysPushButton_clicked(); break;
+        case 5: _t->on_formatHEXCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 6: _t->on_formatBase64CheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -106,14 +127,14 @@ int ClientInterface::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 7;
     }
     return _id;
 }

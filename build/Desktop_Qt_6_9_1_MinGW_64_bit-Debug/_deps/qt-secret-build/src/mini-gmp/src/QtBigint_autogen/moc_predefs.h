@@ -131,6 +131,7 @@
 #define __SIZE_TYPE__ long long unsigned int
 #define __FLT64_MAX_10_EXP__ 308
 #define __BFLT16_IS_IEC_60559__ 0
+#define QtBigint_EXPORTS 1
 #define __FLT16_MAX_10_EXP__ 4
 #define __cpp_delegating_constructors 200604L
 #define __DBL_MAX__ double(1.79769313486231570814527423731704357e+308L)

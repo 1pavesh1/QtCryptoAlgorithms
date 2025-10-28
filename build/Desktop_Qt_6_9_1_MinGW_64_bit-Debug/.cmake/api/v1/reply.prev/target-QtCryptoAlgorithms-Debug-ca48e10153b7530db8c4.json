@@ -621,6 +621,11 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "Enum/TypeAlgorithm.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "CryptoAlgorithms/RSA.h",
 			"sourceGroupIndex" : 2
 		},
@@ -647,11 +652,6 @@
 		{
 			"backtrace" : 4,
 			"path" : "Timer/SpeedTimer.h",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 4,
-			"path" : "Enum/TypeAlgorithm.h",
 			"sourceGroupIndex" : 2
 		},
 		{
