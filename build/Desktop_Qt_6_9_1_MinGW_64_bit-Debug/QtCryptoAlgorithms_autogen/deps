@@ -4,16 +4,16 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt\ projects/QtCryptoAlgorithms/CMakeLists.txt \
 	D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.cpp \
 	D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.h \
-	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AES.h \
-	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/Blowfish.h \
-	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/DES.h \
-	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSA.h \
-	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/BlowfishEncryptor.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/DESEncryptor.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeCiphertext.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
-	D:/Qt\ projects/QtCryptoAlgorithms/Timer/SpeedTimer.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \

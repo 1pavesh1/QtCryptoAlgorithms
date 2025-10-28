@@ -1,6 +1,5 @@
 #include "ClientInterface.h"
 #include "ui_ClientInterface.h"
-#include <QThread>
 
 ClientInterface::ClientInterface(QWidget *parent)
     : QMainWindow(parent)
@@ -46,6 +45,7 @@ void ClientInterface::UpdateInterfaceFrame(const TypeAlghorithm &typeAlghorithm)
     switch(typeAlghorithm)
     {
     case AES:
+        ui->aesInfoFrame->setVisible(true);
         break;
     case Blowfish:
         break;
@@ -64,6 +64,7 @@ void ClientInterface::UpdateInterfaceFrame(const TypeAlghorithm &typeAlghorithm)
 void ClientInterface::ClearInterfaceFrame()
 {
     ui->rsaInfoFrame->setVisible(false);
+    ui->aesInfoFrame->setVisible(false);
 }
 
 void ClientInterface::on_toCryptPushButton_clicked()
@@ -84,7 +85,7 @@ void ClientInterface::on_fromCryptPushButton_clicked()
 {
     if (ui->decryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
     {
-        messageWidget = new MessageWidget(this, "Вы не ввели текст для расшифрования", INFORMATION);
+        messageWidget = new MessageWidget(this, "Вы не ввели текст для дешифрования", INFORMATION);
         messageWidget->Show();
     }
     else
@@ -205,6 +206,7 @@ void ClientInterface::DecryptXTEA(const QByteArray &message)
 {
 
 }
+
 void ClientInterface::on_generateRSAKeyPushButton_clicked()
 {
     QByteArray publicKey, privateKey;
@@ -212,7 +214,6 @@ void ClientInterface::on_generateRSAKeyPushButton_clicked()
     ui->closeKeyRSALineEdit->setText(privateKey.toHex());
     ui->openKeyRSALineEdit->setText(publicKey.toHex());
 }
-
 
 void ClientInterface::on_clearRSAKeysPushButton_clicked()
 {

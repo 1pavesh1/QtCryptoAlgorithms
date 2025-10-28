@@ -370,33 +370,33 @@
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/AES.h",
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h",
 			"MU",
-			"RNZX3BCWSN/moc_AES.cpp",
+			"RNZX3BCWSN/moc_AESEncryptor.cpp",
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/Blowfish.h",
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/BlowfishEncryptor.h",
 			"MU",
-			"RNZX3BCWSN/moc_Blowfish.cpp",
+			"RNZX3BCWSN/moc_BlowfishEncryptor.cpp",
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/DES.h",
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/DESEncryptor.h",
 			"MU",
-			"RNZX3BCWSN/moc_DES.cpp",
+			"RNZX3BCWSN/moc_DESEncryptor.cpp",
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/RSA.h",
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h",
 			"MU",
-			"RNZX3BCWSN/moc_RSA.cpp",
+			"RNZX3BCWSN/moc_RSAEncryptor.cpp",
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h",
+			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h",
 			"MU",
-			"RNZX3BCWSN/moc_XTEA.cpp",
+			"RNZX3BCWSN/moc_XTEAEncryptor.cpp",
 			null
 		],
 		[
@@ -424,9 +424,9 @@
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/Timer/SpeedTimer.h",
+			"D:/Qt projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h",
 			"MU",
-			"H3KQXJXU73/moc_SpeedTimer.cpp",
+			"H3KQXJXU73/moc_TimerOfSpeed.cpp",
 			null
 		]
 	],

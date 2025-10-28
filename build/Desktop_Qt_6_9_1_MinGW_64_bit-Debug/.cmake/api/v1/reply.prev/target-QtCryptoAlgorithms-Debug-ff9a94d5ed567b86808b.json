@@ -627,27 +627,27 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "CryptoAlgorithms/RSA.h",
+			"path" : "CryptoAlgorithms/RSAEncryptor.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
-			"path" : "CryptoAlgorithms/AES.h",
+			"path" : "CryptoAlgorithms/AESEncryptor.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
-			"path" : "CryptoAlgorithms/XTEA.h",
+			"path" : "CryptoAlgorithms/XTEAEncryptor.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
-			"path" : "CryptoAlgorithms/Blowfish.h",
+			"path" : "CryptoAlgorithms/BlowfishEncryptor.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
-			"path" : "CryptoAlgorithms/DES.h",
+			"path" : "CryptoAlgorithms/DESEncryptor.h",
 			"sourceGroupIndex" : 2
 		},
 		{

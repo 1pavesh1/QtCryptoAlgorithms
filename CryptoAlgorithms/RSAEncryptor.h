@@ -1,5 +1,5 @@
-#ifndef RSA_H
-#define RSA_H
+#ifndef RSAENCRYPTOR_H
+#define RSAENCRYPTOR_H
 
 #include <QString>
 #include <QByteArray>
@@ -28,4 +28,4 @@ public:
     }
 };
 
-#endif // RSA_H
+#endif // RSAENCRYPTOR_H

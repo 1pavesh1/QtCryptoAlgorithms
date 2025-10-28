@@ -1,9 +1,9 @@
-#ifndef SPEEDTIMER_H
-#define SPEEDTIMER_H
+#ifndef TIMEROFSPEED_H
+#define TIMEROFSPEED_H
 
 #include <QElapsedTimer>
 
-class SpeedTimer
+class TimerOfSpeed
 {
 private:
     QElapsedTimer timer;
@@ -25,4 +25,4 @@ public:
     }
 };
 
-#endif // SPEEDTIMER_H
+#endif // TIMEROFSPEED_H

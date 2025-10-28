@@ -2,16 +2,16 @@ D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtC
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/moc_predefs.h \
   D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/AnimationInterface.h \
   D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AES.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/Blowfish.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/DES.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSA.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/BlowfishEncryptor.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/DESEncryptor.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h \
   D:/Qt\ projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeCiphertext.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/Timer/SpeedTimer.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h \
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/qaesencryption.h \
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA/qrsaencryption.h \
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/mini-gmp/src/bigint.h \
