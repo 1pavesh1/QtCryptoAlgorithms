@@ -96,6 +96,7 @@ void ClientInterface::on_fromCryptPushButton_clicked()
 
 void ClientInterface::EncryptMsg(const QByteArray &message)
 {
+    timer.StartTimer();
     switch(typeAlghorithm)
     {
     case AES:
@@ -116,6 +117,8 @@ void ClientInterface::EncryptMsg(const QByteArray &message)
     default:
         break;
     }
+    ui->timeToCrypt->setText("Время шифрования: " + QString::number(timer.GetSeconds()) + " миллисекунд");
+    timer.StopTimer();
 }
 
 void ClientInterface::DecryptMsg(const QByteArray &message)

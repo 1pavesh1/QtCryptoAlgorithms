@@ -21,7 +21,7 @@ public:
 
     quint32 GetSeconds() const
     {
-        return static_cast<quint32>(timer.elapsed() / 1000);
+        return static_cast<quint32>(timer.elapsed());
     }
 };
 
