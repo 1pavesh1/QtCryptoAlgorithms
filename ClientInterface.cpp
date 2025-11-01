@@ -7,6 +7,7 @@ ClientInterface::ClientInterface(QWidget *parent)
 {
     ui->setupUi(this);
     ClearInterfaceFrame();
+    UpdateInterfaceFrame(typeAlghorithm);
 }
 
 ClientInterface::~ClientInterface()
@@ -148,7 +149,26 @@ void ClientInterface::DecryptMsg(const QByteArray &message)
 
 void ClientInterface::EncryptAES(const QByteArray &message)
 {
+    QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
+    QByteArray IV = ui->IVLineEdit->text().trimmed().toUtf8();
+    QByteArray encryptMsg;
 
+    switch (ui->operationModeQComboBox->currentIndex())
+    {
+    case 0:
+        encryptMsg = aesEncryptor.EncryptMsg(message, key, IV, ECB);
+        break;
+    case 1:
+        encryptMsg = aesEncryptor.EncryptMsg(message, key, IV, CBC);
+        break;
+    default:
+        break;
+    }
+
+    if (ui->formatHEXCheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
+    else if (ui->formatBase64CheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
 }
 
 void ClientInterface::EncryptBlowfish(const QByteArray &message)
@@ -178,7 +198,28 @@ void ClientInterface::EncryptXTEA(const QByteArray &message)
 
 void ClientInterface::DecryptAES(const QByteArray &message)
 {
+    QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
+    QByteArray decryptMsg;
 
+    switch (ui->operationModeQComboBox->currentIndex())
+    {
+    case 0:
+        if (ui->formatHEXCheckBox->isChecked())
+            decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromHex(message), key, ECB);
+        else if (ui->formatBase64CheckBox->isChecked())
+            decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromBase64(message), key, ECB);
+        break;
+    case 1:
+        if (ui->formatHEXCheckBox->isChecked())
+            decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromHex(message), key, CBC);
+        else if (ui->formatBase64CheckBox->isChecked())
+            decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromBase64(message), key, CBC);
+        break;
+    default:
+        break;
+    }
+
+    ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 
 void ClientInterface::DecryptBlowfish(const QByteArray &message)
@@ -231,4 +272,31 @@ void ClientInterface::on_formatBase64CheckBox_stateChanged(int arg1)
 {
     if (arg1 == Qt::Checked)
         ui->formatHEXCheckBox->setChecked(false);
+}
+
+void ClientInterface::on_generateAESKeyAndIVPushButton_clicked()
+{
+    ui->IVLineEdit->setText(aesEncryptor.GenerateIV().toHex());
+    ui->secretKeyLineEdit->setText(aesEncryptor.GenerateKey(typeKeyAES).toHex());
+}
+
+void ClientInterface::on_sizeSecretKetQComboBox_currentIndexChanged(int index)
+{
+    switch (index)
+    {
+    case 0:
+        typeKeyAES = bit128;
+        ui->secretKeyLineEdit->setMaxLength(32);
+        break;
+    case 1:
+        typeKeyAES = bit192;
+        ui->secretKeyLineEdit->setMaxLength(48);
+        break;
+    case 2:
+        typeKeyAES = bit256;
+        ui->secretKeyLineEdit->setMaxLength(64);
+        break;
+    default:
+        break;
+    }
 }

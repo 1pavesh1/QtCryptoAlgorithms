@@ -5,6 +5,7 @@
 #include <QByteArray>
 #include "CustomWidgets/MessageWidget.h"
 #include "Enum/TypeAlgorithm.h"
+#include "Enum/TypeKeyAES.h"
 #include "Timer/TimerOfSpeed.h"
 #include "CryptoAlgorithms/AESEncryptor.h"
 #include "CryptoAlgorithms/BlowfishEncryptor.h"
@@ -25,6 +26,7 @@ private:
     Ui::ClientInterface *ui;
     MessageWidget       *messageWidget;
     TypeAlghorithm      typeAlghorithm = AES;
+    TypeKeyAES          typeKeyAES = bit128;
     TimerOfSpeed        timer;
 
     AESEncryptor        aesEncryptor;
@@ -69,5 +71,7 @@ private slots:
     void on_formatHEXCheckBox_stateChanged(int arg1);
 
     void on_formatBase64CheckBox_stateChanged(int arg1);
+    void on_generateAESKeyAndIVPushButton_clicked();
+    void on_sizeSecretKetQComboBox_currentIndexChanged(int index);
 };
 #endif // CLIENTINTERFACE_H

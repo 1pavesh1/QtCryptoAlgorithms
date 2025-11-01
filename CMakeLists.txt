@@ -23,6 +23,8 @@ qt_add_executable(QtCryptoAlgorithms
     CryptoAlgorithms/DESEncryptor.h
     Timer/TimerOfSpeed.h
     Enum/TypeCiphertext.h
+    Enum/TypeKeyAES.h
+
 )
 
 include(GNUInstallDirs)
