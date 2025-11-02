@@ -51,7 +51,10 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         "arg1",
         "on_formatBase64CheckBox_stateChanged",
         "on_generateAESKeyAndIVPushButton_clicked",
-        "on_sizeSecretKetQComboBox_currentIndexChanged"
+        "on_sizeSecretKetQComboBox_currentIndexChanged",
+        "on_generateXTEAKeyPushButton_clicked",
+        "on_clearXTEAKeyPushButton_clicked",
+        "on_clearAESKeyAndIVPushButton_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -81,6 +84,12 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         QtMocHelpers::SlotData<void(int)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::Int, 5 },
         }}),
+        // Slot 'on_generateXTEAKeyPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_clearXTEAKeyPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_clearAESKeyAndIVPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -113,6 +122,9 @@ void ClientInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 6: _t->on_formatBase64CheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 7: _t->on_generateAESKeyAndIVPushButton_clicked(); break;
         case 8: _t->on_sizeSecretKetQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 9: _t->on_generateXTEAKeyPushButton_clicked(); break;
+        case 10: _t->on_clearXTEAKeyPushButton_clicked(); break;
+        case 11: _t->on_clearAESKeyAndIVPushButton_clicked(); break;
         default: ;
         }
     }
@@ -137,14 +149,14 @@ int ClientInterface::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 12;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 12;
     }
     return _id;
 }

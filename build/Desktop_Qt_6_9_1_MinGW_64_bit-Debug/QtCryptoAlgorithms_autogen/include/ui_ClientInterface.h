@@ -56,6 +56,11 @@ public:
     QLabel *secretKeyLabel_2;
     QLabel *secretKeyLabel_3;
     QComboBox *operationModeQComboBox;
+    QFrame *xteaInfoFrame;
+    QLabel *secretKeyLabel_4;
+    QLineEdit *secretKeyXTEALineEdit;
+    QPushButton *generateXTEAKeyPushButton;
+    QPushButton *clearXTEAKeyPushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -485,6 +490,57 @@ public:
 "    padding: 8px;\n"
 "    border-radius: 4px;\n"
 "}"));
+        xteaInfoFrame = new QFrame(centralwidget);
+        xteaInfoFrame->setObjectName("xteaInfoFrame");
+        xteaInfoFrame->setGeometry(QRect(190, 0, 1001, 271));
+        xteaInfoFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        xteaInfoFrame->setFrameShadow(QFrame::Shadow::Raised);
+        secretKeyLabel_4 = new QLabel(xteaInfoFrame);
+        secretKeyLabel_4->setObjectName("secretKeyLabel_4");
+        secretKeyLabel_4->setGeometry(QRect(10, 10, 171, 21));
+        secretKeyLabel_4->setFont(font2);
+        secretKeyLabel_4->setStyleSheet(QString::fromUtf8("QLabel\n"
+"{\n"
+"	color: black;\n"
+"}"));
+        secretKeyXTEALineEdit = new QLineEdit(xteaInfoFrame);
+        secretKeyXTEALineEdit->setObjectName("secretKeyXTEALineEdit");
+        secretKeyXTEALineEdit->setGeometry(QRect(200, 10, 791, 24));
+        secretKeyXTEALineEdit->setMaxLength(32);
+        generateXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
+        generateXTEAKeyPushButton->setObjectName("generateXTEAKeyPushButton");
+        generateXTEAKeyPushButton->setGeometry(QRect(10, 230, 151, 31));
+        generateXTEAKeyPushButton->setFont(font3);
+        generateXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        generateXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	background-color: rgb(60, 187, 255);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	background-color: rgb(103, 255, 245);\n"
+"}"));
+        clearXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
+        clearXTEAKeyPushButton->setObjectName("clearXTEAKeyPushButton");
+        clearXTEAKeyPushButton->setGeometry(QRect(170, 230, 121, 31));
+        clearXTEAKeyPushButton->setFont(font3);
+        clearXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        clearXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	background-color: rgb(255, 57, 60);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	background-color: rgb(255, 105, 108);\n"
+"}"));
         ClientInterface->setCentralWidget(centralwidget);
         menubar = new QMenuBar(ClientInterface);
         menubar->setObjectName("menubar");
@@ -537,6 +593,10 @@ public:
         operationModeQComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "ECB", nullptr));
         operationModeQComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "CBC", nullptr));
 
+        secretKeyLabel_4->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\265\320\272\321\200\320\265\321\202\320\275\321\213\320\271 \320\272\320\273\321\216\321\207: ", nullptr));
+        secretKeyXTEALineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
+        generateXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
+        clearXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 
 };

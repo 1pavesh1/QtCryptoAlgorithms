@@ -73,5 +73,8 @@ private slots:
     void on_formatBase64CheckBox_stateChanged(int arg1);
     void on_generateAESKeyAndIVPushButton_clicked();
     void on_sizeSecretKetQComboBox_currentIndexChanged(int index);
+    void on_generateXTEAKeyPushButton_clicked();
+    void on_clearXTEAKeyPushButton_clicked();
+    void on_clearAESKeyAndIVPushButton_clicked();
 };
 #endif // CLIENTINTERFACE_H

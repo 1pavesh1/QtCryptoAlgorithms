@@ -56,6 +56,7 @@ void ClientInterface::UpdateInterfaceFrame(const TypeAlghorithm &typeAlghorithm)
         ui->rsaInfoFrame->setVisible(true);
         break;
     case XTEA:
+        ui->xteaInfoFrame->setVisible(true);
         break;
     default:
         break;
@@ -66,6 +67,7 @@ void ClientInterface::ClearInterfaceFrame()
 {
     ui->rsaInfoFrame->setVisible(false);
     ui->aesInfoFrame->setVisible(false);
+    ui->xteaInfoFrame->setVisible(false);
 }
 
 void ClientInterface::on_toCryptPushButton_clicked()
@@ -193,7 +195,12 @@ void ClientInterface::EncryptRSA(const QByteArray &message)
 
 void ClientInterface::EncryptXTEA(const QByteArray &message)
 {
-
+    QByteArray secretKey = ui->secretKeyXTEALineEdit->text().trimmed().toUtf8();
+    QByteArray encryptMsg = xteaEncryptor.Encrypt(message, secretKey);
+    if (ui->formatHEXCheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
+    else if (ui->formatBase64CheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
 }
 
 void ClientInterface::DecryptAES(const QByteArray &message)
@@ -245,7 +252,13 @@ void ClientInterface::DecryptRSA(const QByteArray &message)
 
 void ClientInterface::DecryptXTEA(const QByteArray &message)
 {
-
+    QByteArray secretKey = ui->secretKeyXTEALineEdit->text().trimmed().toUtf8();
+    QByteArray decryptMsg;
+    if (ui->formatHEXCheckBox->isChecked())
+        decryptMsg = xteaEncryptor.Decrypt(QByteArray::fromHex(message), secretKey);
+    else if (ui->formatBase64CheckBox->isChecked())
+        decryptMsg = xteaEncryptor.Decrypt(QByteArray::fromBase64(message), secretKey);
+    ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 
 void ClientInterface::on_generateRSAKeyPushButton_clicked()
@@ -299,4 +312,20 @@ void ClientInterface::on_sizeSecretKetQComboBox_currentIndexChanged(int index)
     default:
         break;
     }
+}
+
+void ClientInterface::on_generateXTEAKeyPushButton_clicked()
+{
+    ui->secretKeyXTEALineEdit->setText(xteaEncryptor.Generate128BitKey().toHex());
+}
+
+void ClientInterface::on_clearXTEAKeyPushButton_clicked()
+{
+    ui->secretKeyXTEALineEdit->clear();
+}
+
+void ClientInterface::on_clearAESKeyAndIVPushButton_clicked()
+{
+    ui->IVLineEdit->clear();
+    ui->secretKeyLineEdit->clear();
 }
