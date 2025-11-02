@@ -105,7 +105,7 @@ QComboBox QAbstractItemView
       <x>10</x>
       <y>650</y>
       <width>581</width>
-      <height>31</height>
+      <height>35</height>
      </rect>
     </property>
     <property name="font">
@@ -155,9 +155,9 @@ QPushButton::hover
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>15</y>
        <width>171</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -181,9 +181,9 @@ QPushButton::hover
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
+       <y>55</y>
        <width>171</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -209,8 +209,28 @@ QPushButton::hover
        <x>190</x>
        <y>10</y>
        <width>801</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding-top: 5px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    background-color: transparent;
+    font-size: 16px;
+    selection-background-color: #3f51b5;
+}
+
+QLineEdit:focus {
+    border-bottom-color: #3f51b5;
+}
+
+QLineEdit::placeholder {
+    color: #9e9e9e;
+    font-size: 14px;
+}</string>
      </property>
      <property name="placeholderText">
       <string>HEX формат</string>
@@ -222,8 +242,28 @@ QPushButton::hover
        <x>190</x>
        <y>50</y>
        <width>801</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding-top: 5px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    background-color: transparent;
+    font-size: 16px;
+    selection-background-color: #3f51b5;
+}
+
+QLineEdit:focus {
+    border-bottom-color: #3f51b5;
+}
+
+QLineEdit::placeholder {
+    color: #9e9e9e;
+    font-size: 14px;
+}</string>
      </property>
      <property name="placeholderText">
       <string>HEX формат</string>
@@ -330,7 +370,7 @@ QPushButton::hover
       <x>600</x>
       <y>650</y>
       <width>591</width>
-      <height>31</height>
+      <height>35</height>
      </rect>
     </property>
     <property name="font">
@@ -370,6 +410,117 @@ QPushButton::hover
       <height>321</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit
+{
+ border: none;
+ border-radius: 20px;
+ background-color: white;
+ padding: 10px;
+}
+
+QScrollBar:vertical 
+{
+ border: none;
+    background: #f5f5f5;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical 
+{
+ background: #c1c1c1;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover 
+{
+ background: #a8a8a8;
+}
+
+QScrollBar::handle:vertical:pressed
+{
+ background: #787878;
+}
+
+QScrollBar::add-line:vertical 
+{
+ border: none;
+    background: none;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical 
+{
+ border: none;
+ background: none;
+ height: 0px;
+ subcontrol-position: top;
+ subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical 
+{
+ background: none;
+}
+
+QScrollBar:horizontal 
+{
+ border: none;
+    background: #f5f5f5;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal 
+{
+    background: #c1c1c1;
+    min-width: 20px;
+ border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover 
+{
+ background: #a8a8a8;
+}
+
+QScrollBar::handle:horizontal:pressed 
+{
+ background: #787878;
+}
+
+QScrollBar::add-line:horizontal 
+{
+    border: none;
+    background: none;
+    width: 0px;
+    subcontrol-position: right;
+ subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal 
+{
+    border: none;
+    background: none;
+    width: 0px;
+    subcontrol-position: left;
+ subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+ background: none;
+}</string>
+    </property>
     <property name="placeholderText">
      <string>Текст для шифрования (Формат UTF-8)</string>
     </property>
@@ -382,6 +533,117 @@ QPushButton::hover
       <width>591</width>
       <height>321</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit
+{
+ border: none;
+ border-radius: 20px;
+ background-color: white;
+ padding: 10px;
+}
+
+QScrollBar:vertical 
+{
+ border: none;
+    background: #f5f5f5;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical 
+{
+ background: #c1c1c1;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover 
+{
+ background: #a8a8a8;
+}
+
+QScrollBar::handle:vertical:pressed
+{
+ background: #787878;
+}
+
+QScrollBar::add-line:vertical 
+{
+ border: none;
+    background: none;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical 
+{
+ border: none;
+ background: none;
+ height: 0px;
+ subcontrol-position: top;
+ subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical 
+{
+ background: none;
+}
+
+QScrollBar:horizontal 
+{
+ border: none;
+    background: #f5f5f5;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal 
+{
+    background: #c1c1c1;
+    min-width: 20px;
+ border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover 
+{
+ background: #a8a8a8;
+}
+
+QScrollBar::handle:horizontal:pressed 
+{
+ background: #787878;
+}
+
+QScrollBar::add-line:horizontal 
+{
+    border: none;
+    background: none;
+    width: 0px;
+    subcontrol-position: right;
+ subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal 
+{
+    border: none;
+    background: none;
+    width: 0px;
+    subcontrol-position: left;
+ subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+ background: none;
+}</string>
     </property>
     <property name="placeholderText">
      <string>Зашифрованное сообщение</string>
@@ -524,6 +786,158 @@ QCheckBox::indicator:disabled {
      <string>Base64</string>
     </property>
    </widget>
+   <widget class="QFrame" name="xteaInfoFrame">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>1001</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="secretKeyLabel_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>15</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	color: black;
+}</string>
+     </property>
+     <property name="text">
+      <string>Секретный ключ: </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="secretKeyXTEALineEdit">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>10</y>
+       <width>791</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding-top: 5px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    background-color: transparent;
+    font-size: 16px;
+    selection-background-color: #3f51b5;
+}
+
+QLineEdit:focus {
+    border-bottom-color: #3f51b5;
+}
+
+QLineEdit::placeholder {
+    color: #9e9e9e;
+    font-size: 14px;
+}</string>
+     </property>
+     <property name="maxLength">
+      <number>32</number>
+     </property>
+     <property name="placeholderText">
+      <string>HEX формат</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generateXTEAKeyPushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	background-color: rgb(60, 187, 255);
+	color: white;
+	border: none;
+	border-radius: 15px;
+}
+
+QPushButton::hover
+{
+	background-color: rgb(103, 255, 245);
+}</string>
+     </property>
+     <property name="text">
+      <string>Сгенерировать</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clearXTEAKeyPushButton">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>230</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	background-color: rgb(255, 57, 60);
+	color: white;
+	border: none;
+	border-radius: 15px;
+}
+
+QPushButton::hover
+{
+	background-color: rgb(255, 105, 108);
+}</string>
+     </property>
+     <property name="text">
+      <string>Очистить</string>
+     </property>
+    </widget>
+   </widget>
    <widget class="QFrame" name="aesInfoFrame">
     <property name="geometry">
      <rect>
@@ -543,9 +957,9 @@ QCheckBox::indicator:disabled {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>15</y>
        <width>241</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -569,9 +983,9 @@ QCheckBox::indicator:disabled {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
+       <y>55</y>
        <width>171</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -597,8 +1011,28 @@ QCheckBox::indicator:disabled {
        <x>250</x>
        <y>10</y>
        <width>741</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding-top: 5px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    background-color: transparent;
+    font-size: 16px;
+    selection-background-color: #3f51b5;
+}
+
+QLineEdit:focus {
+    border-bottom-color: #3f51b5;
+}
+
+QLineEdit::placeholder {
+    color: #9e9e9e;
+    font-size: 14px;
+}</string>
      </property>
      <property name="maxLength">
       <number>32</number>
@@ -613,8 +1047,28 @@ QCheckBox::indicator:disabled {
        <x>250</x>
        <y>50</y>
        <width>741</width>
-       <height>24</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding-top: 5px;
+    padding-left: 5px;
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    background-color: transparent;
+    font-size: 16px;
+    selection-background-color: #3f51b5;
+}
+
+QLineEdit:focus {
+    border-bottom-color: #3f51b5;
+}
+
+QLineEdit::placeholder {
+    color: #9e9e9e;
+    font-size: 14px;
+}</string>
      </property>
      <property name="maxLength">
       <number>32</number>
@@ -701,7 +1155,7 @@ QPushButton::hover
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>120</y>
+       <y>125</y>
        <width>171</width>
        <height>41</height>
       </rect>
@@ -773,9 +1227,9 @@ QComboBox QAbstractItemView
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>130</y>
+       <y>135</y>
        <width>151</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -799,9 +1253,9 @@ QComboBox QAbstractItemView
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
+       <y>95</y>
        <width>211</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -825,7 +1279,7 @@ QComboBox QAbstractItemView
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>80</y>
+       <y>85</y>
        <width>171</width>
        <height>41</height>
       </rect>
@@ -887,138 +1341,6 @@ QComboBox QAbstractItemView
        <string>CBC</string>
       </property>
      </item>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="xteaInfoFrame">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>0</y>
-      <width>1001</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
-    </property>
-    <widget class="QLabel" name="secretKeyLabel_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>171</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>15</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel
-{
-	color: black;
-}</string>
-     </property>
-     <property name="text">
-      <string>Секретный ключ: </string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="secretKeyXTEALineEdit">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>10</y>
-       <width>791</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>32</number>
-     </property>
-     <property name="placeholderText">
-      <string>HEX формат</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="generateXTEAKeyPushButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(60, 187, 255);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(103, 255, 245);
-}</string>
-     </property>
-     <property name="text">
-      <string>Сгенерировать</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="clearXTEAKeyPushButton">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>230</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(255, 57, 60);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(255, 105, 108);
-}</string>
-     </property>
-     <property name="text">
-      <string>Очистить</string>
-     </property>
     </widget>
    </widget>
   </widget>

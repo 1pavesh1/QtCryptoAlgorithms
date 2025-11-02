@@ -45,6 +45,11 @@ public:
     QLabel *formatOutLabel;
     QCheckBox *formatHEXCheckBox;
     QCheckBox *formatBase64CheckBox;
+    QFrame *xteaInfoFrame;
+    QLabel *secretKeyLabel_4;
+    QLineEdit *secretKeyXTEALineEdit;
+    QPushButton *generateXTEAKeyPushButton;
+    QPushButton *clearXTEAKeyPushButton;
     QFrame *aesInfoFrame;
     QLabel *IVLabel;
     QLabel *secretKeyLabel;
@@ -56,11 +61,6 @@ public:
     QLabel *secretKeyLabel_2;
     QLabel *secretKeyLabel_3;
     QComboBox *operationModeQComboBox;
-    QFrame *xteaInfoFrame;
-    QLabel *secretKeyLabel_4;
-    QLineEdit *secretKeyXTEALineEdit;
-    QPushButton *generateXTEAKeyPushButton;
-    QPushButton *clearXTEAKeyPushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -122,7 +122,7 @@ public:
 "}"));
         toCryptPushButton = new QPushButton(centralwidget);
         toCryptPushButton->setObjectName("toCryptPushButton");
-        toCryptPushButton->setGeometry(QRect(10, 650, 581, 31));
+        toCryptPushButton->setGeometry(QRect(10, 650, 581, 35));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Arial")});
         font1.setPointSize(13);
@@ -148,7 +148,7 @@ public:
         rsaInfoFrame->setFrameShadow(QFrame::Shadow::Raised);
         openKeyLabel = new QLabel(rsaInfoFrame);
         openKeyLabel->setObjectName("openKeyLabel");
-        openKeyLabel->setGeometry(QRect(10, 10, 171, 21));
+        openKeyLabel->setGeometry(QRect(10, 15, 171, 31));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Arial")});
         font2.setPointSize(15);
@@ -160,7 +160,7 @@ public:
 "}"));
         closeKeyLabel = new QLabel(rsaInfoFrame);
         closeKeyLabel->setObjectName("closeKeyLabel");
-        closeKeyLabel->setGeometry(QRect(10, 50, 171, 21));
+        closeKeyLabel->setGeometry(QRect(10, 55, 171, 31));
         closeKeyLabel->setFont(font2);
         closeKeyLabel->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
@@ -168,10 +168,46 @@ public:
 "}"));
         openKeyRSALineEdit = new QLineEdit(rsaInfoFrame);
         openKeyRSALineEdit->setObjectName("openKeyRSALineEdit");
-        openKeyRSALineEdit->setGeometry(QRect(190, 10, 801, 24));
+        openKeyRSALineEdit->setGeometry(QRect(190, 10, 801, 31));
+        openKeyRSALineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    padding-top: 5px;\n"
+"    padding-left: 5px;\n"
+"    border: none;\n"
+"    border-bottom: 2px solid #c8c8c8;\n"
+"    background-color: transparent;\n"
+"    font-size: 16px;\n"
+"    selection-background-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: #9e9e9e;\n"
+"    font-size: 14px;\n"
+"}"));
         closeKeyRSALineEdit = new QLineEdit(rsaInfoFrame);
         closeKeyRSALineEdit->setObjectName("closeKeyRSALineEdit");
-        closeKeyRSALineEdit->setGeometry(QRect(190, 50, 801, 24));
+        closeKeyRSALineEdit->setGeometry(QRect(190, 50, 801, 31));
+        closeKeyRSALineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    padding-top: 5px;\n"
+"    padding-left: 5px;\n"
+"    border: none;\n"
+"    border-bottom: 2px solid #c8c8c8;\n"
+"    background-color: transparent;\n"
+"    font-size: 16px;\n"
+"    selection-background-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: #9e9e9e;\n"
+"    font-size: 14px;\n"
+"}"));
         generateRSAKeyPushButton = new QPushButton(rsaInfoFrame);
         generateRSAKeyPushButton->setObjectName("generateRSAKeyPushButton");
         generateRSAKeyPushButton->setGeometry(QRect(10, 230, 151, 31));
@@ -216,7 +252,7 @@ public:
         timeToCrypt->setFont(font2);
         fromCryptPushButton = new QPushButton(centralwidget);
         fromCryptPushButton->setObjectName("fromCryptPushButton");
-        fromCryptPushButton->setGeometry(QRect(600, 650, 591, 31));
+        fromCryptPushButton->setGeometry(QRect(600, 650, 591, 35));
         fromCryptPushButton->setFont(font1);
         fromCryptPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         fromCryptPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -234,9 +270,222 @@ public:
         encryptDataPlainTextEdit = new QPlainTextEdit(centralwidget);
         encryptDataPlainTextEdit->setObjectName("encryptDataPlainTextEdit");
         encryptDataPlainTextEdit->setGeometry(QRect(10, 320, 581, 321));
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Arial")});
+        font4.setPointSize(12);
+        encryptDataPlainTextEdit->setFont(font4);
+        encryptDataPlainTextEdit->setStyleSheet(QString::fromUtf8("QPlainTextEdit\n"
+"{\n"
+" border: none;\n"
+" border-radius: 20px;\n"
+" background-color: white;\n"
+" padding: 10px;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical \n"
+"{\n"
+" border: none;\n"
+"    background: #f5f5f5;\n"
+"    width: 10px;\n"
+"    margin: 0px 0px 0px 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical \n"
+"{\n"
+" background: #c1c1c1;\n"
+"    min-height: 20px;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover \n"
+"{\n"
+" background: #a8a8a8;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:pressed\n"
+"{\n"
+" background: #787878;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical \n"
+"{\n"
+" border: none;\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"    subcontrol-position: bottom;\n"
+"    subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:vertical \n"
+"{\n"
+" border: none;\n"
+" background: none;\n"
+" height: 0px;\n"
+" subcontrol-position: top;\n"
+" subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical \n"
+"{\n"
+" background: none;"
+                        "\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal \n"
+"{\n"
+" border: none;\n"
+"    background: #f5f5f5;\n"
+"    height: 10px;\n"
+"    margin: 0px 0px 0px 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal \n"
+"{\n"
+"    background: #c1c1c1;\n"
+"    min-width: 20px;\n"
+" border-radius: 5px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:hover \n"
+"{\n"
+" background: #a8a8a8;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:pressed \n"
+"{\n"
+" background: #787878;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal \n"
+"{\n"
+"    border: none;\n"
+"    background: none;\n"
+"    width: 0px;\n"
+"    subcontrol-position: right;\n"
+" subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:horizontal \n"
+"{\n"
+"    border: none;\n"
+"    background: none;\n"
+"    width: 0px;\n"
+"    subcontrol-position: left;\n"
+" subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal\n"
+"{\n"
+" background: none;\n"
+"}"));
         decryptDataPlainTextEdit = new QPlainTextEdit(centralwidget);
         decryptDataPlainTextEdit->setObjectName("decryptDataPlainTextEdit");
         decryptDataPlainTextEdit->setGeometry(QRect(600, 320, 591, 321));
+        decryptDataPlainTextEdit->setFont(font4);
+        decryptDataPlainTextEdit->setStyleSheet(QString::fromUtf8("QPlainTextEdit\n"
+"{\n"
+" border: none;\n"
+" border-radius: 20px;\n"
+" background-color: white;\n"
+" padding: 10px;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical \n"
+"{\n"
+" border: none;\n"
+"    background: #f5f5f5;\n"
+"    width: 10px;\n"
+"    margin: 0px 0px 0px 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical \n"
+"{\n"
+" background: #c1c1c1;\n"
+"    min-height: 20px;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:hover \n"
+"{\n"
+" background: #a8a8a8;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:vertical:pressed\n"
+"{\n"
+" background: #787878;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical \n"
+"{\n"
+" border: none;\n"
+"    background: none;\n"
+"    height: 0px;\n"
+"    subcontrol-position: bottom;\n"
+"    subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:vertical \n"
+"{\n"
+" border: none;\n"
+" background: none;\n"
+" height: 0px;\n"
+" subcontrol-position: top;\n"
+" subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical \n"
+"{\n"
+" background: none;"
+                        "\n"
+"}\n"
+"\n"
+"QScrollBar:horizontal \n"
+"{\n"
+" border: none;\n"
+"    background: #f5f5f5;\n"
+"    height: 10px;\n"
+"    margin: 0px 0px 0px 0px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal \n"
+"{\n"
+"    background: #c1c1c1;\n"
+"    min-width: 20px;\n"
+" border-radius: 5px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:hover \n"
+"{\n"
+" background: #a8a8a8;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:horizontal:pressed \n"
+"{\n"
+" background: #787878;\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:horizontal \n"
+"{\n"
+"    border: none;\n"
+"    background: none;\n"
+"    width: 0px;\n"
+"    subcontrol-position: right;\n"
+" subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:horizontal \n"
+"{\n"
+"    border: none;\n"
+"    background: none;\n"
+"    width: 0px;\n"
+"    subcontrol-position: left;\n"
+" subcontrol-origin: margin;\n"
+"}\n"
+"\n"
+"QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal\n"
+"{\n"
+" background: none;\n"
+"}"));
         formatOutLabel = new QLabel(centralwidget);
         formatOutLabel->setObjectName("formatOutLabel");
         formatOutLabel->setGeometry(QRect(10, 283, 331, 21));
@@ -248,11 +497,11 @@ public:
         formatHEXCheckBox = new QCheckBox(centralwidget);
         formatHEXCheckBox->setObjectName("formatHEXCheckBox");
         formatHEXCheckBox->setGeometry(QRect(350, 280, 61, 31));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Arial")});
-        font4.setPointSize(12);
-        font4.setBold(false);
-        formatHEXCheckBox->setFont(font4);
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial")});
+        font5.setPointSize(12);
+        font5.setBold(false);
+        formatHEXCheckBox->setFont(font5);
         formatHEXCheckBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         formatHEXCheckBox->setStyleSheet(QString::fromUtf8("QCheckBox \n"
 "{\n"
@@ -288,10 +537,7 @@ public:
         formatBase64CheckBox = new QCheckBox(centralwidget);
         formatBase64CheckBox->setObjectName("formatBase64CheckBox");
         formatBase64CheckBox->setGeometry(QRect(420, 280, 91, 31));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("Arial")});
-        font5.setPointSize(12);
-        formatBase64CheckBox->setFont(font5);
+        formatBase64CheckBox->setFont(font4);
         formatBase64CheckBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         formatBase64CheckBox->setStyleSheet(QString::fromUtf8("QCheckBox \n"
 "{\n"
@@ -324,6 +570,75 @@ public:
 "    background: #ecf0f1;\n"
 "    border: 2px solid #bdc3c7;\n"
 "}"));
+        xteaInfoFrame = new QFrame(centralwidget);
+        xteaInfoFrame->setObjectName("xteaInfoFrame");
+        xteaInfoFrame->setGeometry(QRect(190, 0, 1001, 271));
+        xteaInfoFrame->setFrameShape(QFrame::Shape::StyledPanel);
+        xteaInfoFrame->setFrameShadow(QFrame::Shadow::Raised);
+        secretKeyLabel_4 = new QLabel(xteaInfoFrame);
+        secretKeyLabel_4->setObjectName("secretKeyLabel_4");
+        secretKeyLabel_4->setGeometry(QRect(10, 20, 171, 41));
+        secretKeyLabel_4->setFont(font2);
+        secretKeyLabel_4->setStyleSheet(QString::fromUtf8("QLabel\n"
+"{\n"
+"	color: black;\n"
+"}"));
+        secretKeyXTEALineEdit = new QLineEdit(xteaInfoFrame);
+        secretKeyXTEALineEdit->setObjectName("secretKeyXTEALineEdit");
+        secretKeyXTEALineEdit->setGeometry(QRect(200, 10, 791, 41));
+        secretKeyXTEALineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    padding-top: 5px;\n"
+"    padding-left: 5px;\n"
+"    border: none;\n"
+"    border-bottom: 2px solid #c8c8c8;\n"
+"    background-color: transparent;\n"
+"    font-size: 16px;\n"
+"    selection-background-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: #9e9e9e;\n"
+"    font-size: 14px;\n"
+"}"));
+        secretKeyXTEALineEdit->setMaxLength(32);
+        generateXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
+        generateXTEAKeyPushButton->setObjectName("generateXTEAKeyPushButton");
+        generateXTEAKeyPushButton->setGeometry(QRect(10, 230, 151, 31));
+        generateXTEAKeyPushButton->setFont(font3);
+        generateXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        generateXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	background-color: rgb(60, 187, 255);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	background-color: rgb(103, 255, 245);\n"
+"}"));
+        clearXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
+        clearXTEAKeyPushButton->setObjectName("clearXTEAKeyPushButton");
+        clearXTEAKeyPushButton->setGeometry(QRect(170, 230, 121, 31));
+        clearXTEAKeyPushButton->setFont(font3);
+        clearXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        clearXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	background-color: rgb(255, 57, 60);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	background-color: rgb(255, 105, 108);\n"
+"}"));
         aesInfoFrame = new QFrame(centralwidget);
         aesInfoFrame->setObjectName("aesInfoFrame");
         aesInfoFrame->setGeometry(QRect(190, 0, 1001, 271));
@@ -331,7 +646,7 @@ public:
         aesInfoFrame->setFrameShadow(QFrame::Shadow::Raised);
         IVLabel = new QLabel(aesInfoFrame);
         IVLabel->setObjectName("IVLabel");
-        IVLabel->setGeometry(QRect(10, 10, 241, 21));
+        IVLabel->setGeometry(QRect(10, 15, 241, 31));
         IVLabel->setFont(font2);
         IVLabel->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
@@ -339,7 +654,7 @@ public:
 "}"));
         secretKeyLabel = new QLabel(aesInfoFrame);
         secretKeyLabel->setObjectName("secretKeyLabel");
-        secretKeyLabel->setGeometry(QRect(10, 50, 171, 21));
+        secretKeyLabel->setGeometry(QRect(10, 55, 171, 31));
         secretKeyLabel->setFont(font2);
         secretKeyLabel->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
@@ -347,11 +662,47 @@ public:
 "}"));
         IVLineEdit = new QLineEdit(aesInfoFrame);
         IVLineEdit->setObjectName("IVLineEdit");
-        IVLineEdit->setGeometry(QRect(250, 10, 741, 24));
+        IVLineEdit->setGeometry(QRect(250, 10, 741, 31));
+        IVLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    padding-top: 5px;\n"
+"    padding-left: 5px;\n"
+"    border: none;\n"
+"    border-bottom: 2px solid #c8c8c8;\n"
+"    background-color: transparent;\n"
+"    font-size: 16px;\n"
+"    selection-background-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: #9e9e9e;\n"
+"    font-size: 14px;\n"
+"}"));
         IVLineEdit->setMaxLength(32);
         secretKeyLineEdit = new QLineEdit(aesInfoFrame);
         secretKeyLineEdit->setObjectName("secretKeyLineEdit");
-        secretKeyLineEdit->setGeometry(QRect(250, 50, 741, 24));
+        secretKeyLineEdit->setGeometry(QRect(250, 50, 741, 31));
+        secretKeyLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"    padding-top: 5px;\n"
+"    padding-left: 5px;\n"
+"    border: none;\n"
+"    border-bottom: 2px solid #c8c8c8;\n"
+"    background-color: transparent;\n"
+"    font-size: 16px;\n"
+"    selection-background-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #3f51b5;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: #9e9e9e;\n"
+"    font-size: 14px;\n"
+"}"));
         secretKeyLineEdit->setMaxLength(32);
         generateAESKeyAndIVPushButton = new QPushButton(aesInfoFrame);
         generateAESKeyAndIVPushButton->setObjectName("generateAESKeyAndIVPushButton");
@@ -392,7 +743,7 @@ public:
         sizeSecretKetQComboBox->addItem(QString());
         sizeSecretKetQComboBox->addItem(QString());
         sizeSecretKetQComboBox->setObjectName("sizeSecretKetQComboBox");
-        sizeSecretKetQComboBox->setGeometry(QRect(250, 120, 171, 41));
+        sizeSecretKetQComboBox->setGeometry(QRect(250, 125, 171, 41));
         sizeSecretKetQComboBox->setFont(font);
         sizeSecretKetQComboBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         sizeSecretKetQComboBox->setStyleSheet(QString::fromUtf8("QComboBox \n"
@@ -433,7 +784,7 @@ public:
 "}"));
         secretKeyLabel_2 = new QLabel(aesInfoFrame);
         secretKeyLabel_2->setObjectName("secretKeyLabel_2");
-        secretKeyLabel_2->setGeometry(QRect(10, 130, 151, 21));
+        secretKeyLabel_2->setGeometry(QRect(10, 135, 151, 31));
         secretKeyLabel_2->setFont(font2);
         secretKeyLabel_2->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
@@ -441,7 +792,7 @@ public:
 "}"));
         secretKeyLabel_3 = new QLabel(aesInfoFrame);
         secretKeyLabel_3->setObjectName("secretKeyLabel_3");
-        secretKeyLabel_3->setGeometry(QRect(10, 90, 211, 21));
+        secretKeyLabel_3->setGeometry(QRect(10, 95, 211, 31));
         secretKeyLabel_3->setFont(font2);
         secretKeyLabel_3->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
@@ -451,7 +802,7 @@ public:
         operationModeQComboBox->addItem(QString());
         operationModeQComboBox->addItem(QString());
         operationModeQComboBox->setObjectName("operationModeQComboBox");
-        operationModeQComboBox->setGeometry(QRect(250, 80, 171, 41));
+        operationModeQComboBox->setGeometry(QRect(250, 85, 171, 41));
         operationModeQComboBox->setFont(font);
         operationModeQComboBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         operationModeQComboBox->setStyleSheet(QString::fromUtf8("QComboBox \n"
@@ -490,57 +841,6 @@ public:
 "    padding: 8px;\n"
 "    border-radius: 4px;\n"
 "}"));
-        xteaInfoFrame = new QFrame(centralwidget);
-        xteaInfoFrame->setObjectName("xteaInfoFrame");
-        xteaInfoFrame->setGeometry(QRect(190, 0, 1001, 271));
-        xteaInfoFrame->setFrameShape(QFrame::Shape::StyledPanel);
-        xteaInfoFrame->setFrameShadow(QFrame::Shadow::Raised);
-        secretKeyLabel_4 = new QLabel(xteaInfoFrame);
-        secretKeyLabel_4->setObjectName("secretKeyLabel_4");
-        secretKeyLabel_4->setGeometry(QRect(10, 10, 171, 21));
-        secretKeyLabel_4->setFont(font2);
-        secretKeyLabel_4->setStyleSheet(QString::fromUtf8("QLabel\n"
-"{\n"
-"	color: black;\n"
-"}"));
-        secretKeyXTEALineEdit = new QLineEdit(xteaInfoFrame);
-        secretKeyXTEALineEdit->setObjectName("secretKeyXTEALineEdit");
-        secretKeyXTEALineEdit->setGeometry(QRect(200, 10, 791, 24));
-        secretKeyXTEALineEdit->setMaxLength(32);
-        generateXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
-        generateXTEAKeyPushButton->setObjectName("generateXTEAKeyPushButton");
-        generateXTEAKeyPushButton->setGeometry(QRect(10, 230, 151, 31));
-        generateXTEAKeyPushButton->setFont(font3);
-        generateXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        generateXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(60, 187, 255);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(103, 255, 245);\n"
-"}"));
-        clearXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
-        clearXTEAKeyPushButton->setObjectName("clearXTEAKeyPushButton");
-        clearXTEAKeyPushButton->setGeometry(QRect(170, 230, 121, 31));
-        clearXTEAKeyPushButton->setFont(font3);
-        clearXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        clearXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(255, 57, 60);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(255, 105, 108);\n"
-"}"));
         ClientInterface->setCentralWidget(centralwidget);
         menubar = new QMenuBar(ClientInterface);
         menubar->setObjectName("menubar");
@@ -578,6 +878,10 @@ public:
         formatOutLabel->setText(QCoreApplication::translate("ClientInterface", "\320\244\320\276\321\200\320\274\320\260\321\202 \320\267\320\260\321\210\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\275\320\276\320\263\320\276 \321\202\320\265\320\272\321\201\321\202\320\260:", nullptr));
         formatHEXCheckBox->setText(QCoreApplication::translate("ClientInterface", "HEX", nullptr));
         formatBase64CheckBox->setText(QCoreApplication::translate("ClientInterface", "Base64", nullptr));
+        secretKeyLabel_4->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\265\320\272\321\200\320\265\321\202\320\275\321\213\320\271 \320\272\320\273\321\216\321\207: ", nullptr));
+        secretKeyXTEALineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
+        generateXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
+        clearXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
         IVLabel->setText(QCoreApplication::translate("ClientInterface", "\320\222\320\265\320\272\321\202\320\276\321\200 \320\270\320\275\320\270\321\206\320\270\320\260\320\273\320\270\320\267\320\260\321\206\320\270\320\270:", nullptr));
         secretKeyLabel->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\265\320\272\321\200\320\265\321\202\320\275\321\213\320\271 \320\272\320\273\321\216\321\207: ", nullptr));
         IVLineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202 (\320\235\320\265\320\276\320\261\321\217\320\267\320\260\321\202\320\265\320\273\321\214\320\275\320\276)", nullptr));
@@ -593,10 +897,6 @@ public:
         operationModeQComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "ECB", nullptr));
         operationModeQComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "CBC", nullptr));
 
-        secretKeyLabel_4->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\265\320\272\321\200\320\265\321\202\320\275\321\213\320\271 \320\272\320\273\321\216\321\207: ", nullptr));
-        secretKeyXTEALineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
-        generateXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
-        clearXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 
 };
