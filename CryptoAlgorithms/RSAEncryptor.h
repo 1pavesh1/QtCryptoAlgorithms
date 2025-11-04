@@ -1,29 +1,21 @@
 #ifndef RSAENCRYPTOR_H
 #define RSAENCRYPTOR_H
 
-#include <QString>
-#include <QByteArray>
 #include <qrsaencryption.h>
-#include "../Enum/TypeCiphertext.h"
+#include "../AbstractClasses/CryptoAlgorithm.h"
 
-class RSAEncryptor
+class RSAEncryptor : public CryptoAlgorithm
 {
-private:
-    QRSAEncryption RSAEncryption;
-
 public:
-    void GenerateKeys(QByteArray &publicKey, QByteArray &privateKey)
-    {
-        RSAEncryption.generatePairKey(publicKey, privateKey);
-    }
-
     QByteArray EncryptMsg(const QByteArray &message, const QByteArray &publicKey)
     {
+        QRSAEncryption RSAEncryption(QRSAEncryption::Rsa::RSA_2048);
         return RSAEncryption.encode(message, QByteArray::fromHex(publicKey));
     }
 
     QByteArray DecryptMsg(const QByteArray &message, const QByteArray &privateKey)
     {
+        QRSAEncryption RSAEncryption(QRSAEncryption::Rsa::RSA_2048);
         return RSAEncryption.decode(message, QByteArray::fromHex(privateKey));
     }
 };

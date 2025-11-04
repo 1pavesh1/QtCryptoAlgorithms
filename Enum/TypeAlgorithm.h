@@ -4,8 +4,6 @@
 enum TypeAlghorithm
 {
     AES,
-    Blowfish,
-    DES,
     RSA,
     XTEA
 };

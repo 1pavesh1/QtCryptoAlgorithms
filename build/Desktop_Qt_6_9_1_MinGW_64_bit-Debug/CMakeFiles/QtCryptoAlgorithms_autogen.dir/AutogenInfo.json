@@ -358,6 +358,12 @@
 			null
 		],
 		[
+			"D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CryptoAlgorithm.h",
+			"MU",
+			"NLRRBYHSZU/moc_CryptoAlgorithm.cpp",
+			null
+		],
+		[
 			"D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h",
 			"MU",
 			"NLRRBYHSZU/moc_CustomWidget.cpp",
@@ -373,18 +379,6 @@
 			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h",
 			"MU",
 			"RNZX3BCWSN/moc_AESEncryptor.cpp",
-			null
-		],
-		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/BlowfishEncryptor.h",
-			"MU",
-			"RNZX3BCWSN/moc_BlowfishEncryptor.cpp",
-			null
-		],
-		[
-			"D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/DESEncryptor.h",
-			"MU",
-			"RNZX3BCWSN/moc_DESEncryptor.cpp",
 			null
 		],
 		[
@@ -418,15 +412,15 @@
 			null
 		],
 		[
-			"D:/Qt projects/QtCryptoAlgorithms/Enum/TypeKeyAES.h",
-			"MU",
-			"QFPTDX5X5T/moc_TypeKeyAES.cpp",
-			null
-		],
-		[
 			"D:/Qt projects/QtCryptoAlgorithms/Enum/TypeMessage.h",
 			"MU",
 			"QFPTDX5X5T/moc_TypeMessage.cpp",
+			null
+		],
+		[
+			"D:/Qt projects/QtCryptoAlgorithms/Singleton/GeneratorDataCrypt.h",
+			"MU",
+			"LDNYHBMTTI/moc_GeneratorDataCrypt.cpp",
 			null
 		],
 		[

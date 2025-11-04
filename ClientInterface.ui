@@ -80,16 +80,6 @@ QComboBox QAbstractItemView
     </item>
     <item>
      <property name="text">
-      <string>Blowfish</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>DES</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>RSA</string>
      </property>
     </item>
@@ -267,80 +257,6 @@ QLineEdit::placeholder {
      </property>
      <property name="placeholderText">
       <string>HEX формат</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="generateRSAKeyPushButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(60, 187, 255);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(103, 255, 245);
-}</string>
-     </property>
-     <property name="text">
-      <string>Сгенерировать</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="clearRSAKeysPushButton">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>230</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(255, 57, 60);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(255, 105, 108);
-}</string>
-     </property>
-     <property name="text">
-      <string>Очистить</string>
      </property>
     </widget>
    </widget>
@@ -863,80 +779,6 @@ QLineEdit::placeholder {
       <string>HEX формат</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="generateXTEAKeyPushButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(60, 187, 255);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(103, 255, 245);
-}</string>
-     </property>
-     <property name="text">
-      <string>Сгенерировать</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="clearXTEAKeyPushButton">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>230</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(255, 57, 60);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(255, 105, 108);
-}</string>
-     </property>
-     <property name="text">
-      <string>Очистить</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QFrame" name="aesInfoFrame">
     <property name="geometry">
@@ -1077,81 +919,7 @@ QLineEdit::placeholder {
       <string>HEX формат</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="generateAESKeyAndIVPushButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>151</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(60, 187, 255);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(103, 255, 245);
-}</string>
-     </property>
-     <property name="text">
-      <string>Сгенерировать</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="clearAESKeyAndIVPushButton">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>230</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-	background-color: rgb(255, 57, 60);
-	color: white;
-	border: none;
-	border-radius: 15px;
-}
-
-QPushButton::hover
-{
-	background-color: rgb(255, 105, 108);
-}</string>
-     </property>
-     <property name="text">
-      <string>Очистить</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="sizeSecretKetQComboBox">
+    <widget class="QComboBox" name="sizeSecretKeyQComboBox">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -1342,6 +1110,80 @@ QComboBox QAbstractItemView
       </property>
      </item>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="generateKeysDataPushButton">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>280</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(60, 187, 255);
+	color: white;
+	border: none;
+	border-radius: 15px;
+}
+
+QPushButton::hover
+{
+	background-color: rgb(103, 255, 245);
+}</string>
+    </property>
+    <property name="text">
+     <string>Сгенерировать</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearKeysDataPushButton">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>280</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(255, 57, 60);
+	color: white;
+	border: none;
+	border-radius: 15px;
+}
+
+QPushButton::hover
+{
+	background-color: rgb(255, 105, 108);
+}</string>
+    </property>
+    <property name="text">
+     <string>Очистить</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

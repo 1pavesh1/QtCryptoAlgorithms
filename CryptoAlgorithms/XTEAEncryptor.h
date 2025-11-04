@@ -3,13 +3,11 @@
 
 #define BLOCK_SIZE 8
 
-#include <QDebug>
-#include <QByteArray>
-#include <QRandomGenerator>
+#include "../AbstractClasses/CryptoAlgorithm.h"
 
 constexpr const qint32 DELTA = 0x9e3669b9;
 
-class XTEAEncryptor
+class XTEAEncryptor : public CryptoAlgorithm
 {
 private:
     qint32 rounds;
@@ -59,19 +57,7 @@ private:
 public:
     XTEAEncryptor() { rounds = 32; }
 
-    QByteArray Generate128BitKey()
-    {
-        QByteArray key(32, 0);
-
-        QRandomGenerator *generator = QRandomGenerator::system();
-        for (int i = 0; i < 32; ++i) {
-            key[i] = static_cast<char>(generator->generate() & 0xFF);
-        }
-
-        return key;
-    }
-
-    QByteArray Encrypt(const QByteArray& data, const QByteArray& key)
+    QByteArray EncryptMsg(const QByteArray& data, const QByteArray& key)
     {
         uchar head = 0;
         QByteArray tempData = data;
@@ -90,7 +76,7 @@ public:
         return tempData;
     }
 
-    QByteArray Decrypt(const QByteArray& data, const QByteArray& key)
+    QByteArray DecryptMsg(const QByteArray& data, const QByteArray& key)
     {
         QByteArray tempData = data;
         Decrypt((uchar*)tempData.data(), tempData.size(), (uchar*)key.data());

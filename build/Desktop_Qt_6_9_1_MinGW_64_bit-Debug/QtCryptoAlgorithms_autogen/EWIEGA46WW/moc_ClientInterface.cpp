@@ -43,18 +43,15 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         "on_toCryptPushButton_clicked",
         "",
         "on_fromCryptPushButton_clicked",
+        "on_generateKeysDataPushButton_clicked",
+        "on_clearKeysDataPushButton_clicked",
         "on_alghoritmsCryptComboBox_currentIndexChanged",
         "index",
-        "on_generateRSAKeyPushButton_clicked",
-        "on_clearRSAKeysPushButton_clicked",
+        "on_sizeSecretKeyQComboBox_currentIndexChanged",
         "on_formatHEXCheckBox_stateChanged",
         "arg1",
         "on_formatBase64CheckBox_stateChanged",
-        "on_generateAESKeyAndIVPushButton_clicked",
-        "on_sizeSecretKetQComboBox_currentIndexChanged",
-        "on_generateXTEAKeyPushButton_clicked",
-        "on_clearXTEAKeyPushButton_clicked",
-        "on_clearAESKeyAndIVPushButton_clicked"
+        "on_operationModeQComboBox_currentIndexChanged"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -62,34 +59,30 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_fromCryptPushButton_clicked'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_generateKeysDataPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_clearKeysDataPushButton_clicked'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_alghoritmsCryptComboBox_currentIndexChanged'
-        QtMocHelpers::SlotData<void(int)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 5 },
+        QtMocHelpers::SlotData<void(int)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 7 },
         }}),
-        // Slot 'on_generateRSAKeyPushButton_clicked'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_clearRSAKeysPushButton_clicked'
-        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_formatHEXCheckBox_stateChanged'
+        // Slot 'on_sizeSecretKeyQComboBox_currentIndexChanged'
         QtMocHelpers::SlotData<void(int)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 9 },
+            { QMetaType::Int, 7 },
+        }}),
+        // Slot 'on_formatHEXCheckBox_stateChanged'
+        QtMocHelpers::SlotData<void(int)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 10 },
         }}),
         // Slot 'on_formatBase64CheckBox_stateChanged'
-        QtMocHelpers::SlotData<void(int)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 9 },
+        QtMocHelpers::SlotData<void(int)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 10 },
         }}),
-        // Slot 'on_generateAESKeyAndIVPushButton_clicked'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_sizeSecretKetQComboBox_currentIndexChanged'
+        // Slot 'on_operationModeQComboBox_currentIndexChanged'
         QtMocHelpers::SlotData<void(int)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 5 },
+            { QMetaType::Int, 7 },
         }}),
-        // Slot 'on_generateXTEAKeyPushButton_clicked'
-        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_clearXTEAKeyPushButton_clicked'
-        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_clearAESKeyAndIVPushButton_clicked'
-        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -115,16 +108,13 @@ void ClientInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         switch (_id) {
         case 0: _t->on_toCryptPushButton_clicked(); break;
         case 1: _t->on_fromCryptPushButton_clicked(); break;
-        case 2: _t->on_alghoritmsCryptComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 3: _t->on_generateRSAKeyPushButton_clicked(); break;
-        case 4: _t->on_clearRSAKeysPushButton_clicked(); break;
-        case 5: _t->on_formatHEXCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 6: _t->on_formatBase64CheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 7: _t->on_generateAESKeyAndIVPushButton_clicked(); break;
-        case 8: _t->on_sizeSecretKetQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 9: _t->on_generateXTEAKeyPushButton_clicked(); break;
-        case 10: _t->on_clearXTEAKeyPushButton_clicked(); break;
-        case 11: _t->on_clearAESKeyAndIVPushButton_clicked(); break;
+        case 2: _t->on_generateKeysDataPushButton_clicked(); break;
+        case 3: _t->on_clearKeysDataPushButton_clicked(); break;
+        case 4: _t->on_alghoritmsCryptComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->on_sizeSecretKeyQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 6: _t->on_formatHEXCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 7: _t->on_formatBase64CheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->on_operationModeQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -149,14 +139,14 @@ int ClientInterface::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 12;
+        _id -= 9;
     }
     return _id;
 }

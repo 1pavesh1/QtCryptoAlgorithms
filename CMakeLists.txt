@@ -19,11 +19,13 @@ qt_add_executable(QtCryptoAlgorithms
     CryptoAlgorithms/RSAEncryptor.h
     CryptoAlgorithms/AESEncryptor.h
     CryptoAlgorithms/XTEAEncryptor.h
-    CryptoAlgorithms/BlowfishEncryptor.h
-    CryptoAlgorithms/DESEncryptor.h
+
+
     Timer/TimerOfSpeed.h
     Enum/TypeCiphertext.h
-    Enum/TypeKeyAES.h
+
+    AbstractClasses/CryptoAlgorithm.h
+    Singleton/GeneratorDataCrypt.h
 
 )
 

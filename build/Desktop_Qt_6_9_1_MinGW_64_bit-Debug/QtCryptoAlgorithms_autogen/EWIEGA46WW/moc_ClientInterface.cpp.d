@@ -1,17 +1,15 @@
 D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/EWIEGA46WW/moc_ClientInterface.cpp: D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.h \
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/moc_predefs.h \
   D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/AnimationInterface.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/CryptoAlgorithm.h \
   D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h \
   D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/BlowfishEncryptor.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/DESEncryptor.h \
   D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h \
   D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h \
   D:/Qt\ projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeCiphertext.h \
-  D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeKeyAES.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
+  D:/Qt\ projects/QtCryptoAlgorithms/Singleton/GeneratorDataCrypt.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h \
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/qaesencryption.h \
   D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-RSA/qrsaencryption.h \
@@ -28,7 +26,6 @@ D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtC
   D:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QPropertyAnimation \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QRandomGenerator \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/QString \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QTimer \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \

@@ -5,18 +5,16 @@ D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEA.h
 D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mmc:Q_OBJECT
  mdp:D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/AnimationInterface.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CryptoAlgorithm.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h
- mdp:D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/BlowfishEncryptor.h
- mdp:D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/DESEncryptor.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/CustomWidgets/MessageWidget.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h
- mdp:D:/Qt projects/QtCryptoAlgorithms/Enum/TypeCiphertext.h
- mdp:D:/Qt projects/QtCryptoAlgorithms/Enum/TypeKeyAES.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/Enum/TypeMessage.h
+ mdp:D:/Qt projects/QtCryptoAlgorithms/Singleton/GeneratorDataCrypt.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtCryptoAlgorithms_autogen/moc_predefs.h
  mdp:D:/Qt projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/_deps/qt-secret-src/src/Qt-AES/qaesencryption.h
@@ -34,7 +32,6 @@ D:/Qt projects/QtCryptoAlgorithms/ClientInterface.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QObject
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QPropertyAnimation
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QRandomGenerator
- mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QString
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/QTimer
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h
  mdp:D:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h
@@ -911,3 +908,5 @@ D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h
 D:/Qt projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h
 D:/Qt projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h
 D:/Qt projects/QtCryptoAlgorithms/Enum/TypeKeyAES.h
+D:/Qt projects/QtCryptoAlgorithms/AbstractClasses/CryptoAlgorithm.h
+D:/Qt projects/QtCryptoAlgorithms/Singleton/GeneratorDataCrypt.h

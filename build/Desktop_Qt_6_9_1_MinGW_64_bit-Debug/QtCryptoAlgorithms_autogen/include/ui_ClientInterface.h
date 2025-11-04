@@ -36,8 +36,6 @@ public:
     QLabel *closeKeyLabel;
     QLineEdit *openKeyRSALineEdit;
     QLineEdit *closeKeyRSALineEdit;
-    QPushButton *generateRSAKeyPushButton;
-    QPushButton *clearRSAKeysPushButton;
     QLabel *timeToCrypt;
     QPushButton *fromCryptPushButton;
     QPlainTextEdit *encryptDataPlainTextEdit;
@@ -48,19 +46,17 @@ public:
     QFrame *xteaInfoFrame;
     QLabel *secretKeyLabel_4;
     QLineEdit *secretKeyXTEALineEdit;
-    QPushButton *generateXTEAKeyPushButton;
-    QPushButton *clearXTEAKeyPushButton;
     QFrame *aesInfoFrame;
     QLabel *IVLabel;
     QLabel *secretKeyLabel;
     QLineEdit *IVLineEdit;
     QLineEdit *secretKeyLineEdit;
-    QPushButton *generateAESKeyAndIVPushButton;
-    QPushButton *clearAESKeyAndIVPushButton;
-    QComboBox *sizeSecretKetQComboBox;
+    QComboBox *sizeSecretKeyQComboBox;
     QLabel *secretKeyLabel_2;
     QLabel *secretKeyLabel_3;
     QComboBox *operationModeQComboBox;
+    QPushButton *generateKeysDataPushButton;
+    QPushButton *clearKeysDataPushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -73,8 +69,6 @@ public:
         centralwidget = new QWidget(ClientInterface);
         centralwidget->setObjectName("centralwidget");
         alghoritmsCryptComboBox = new QComboBox(centralwidget);
-        alghoritmsCryptComboBox->addItem(QString());
-        alghoritmsCryptComboBox->addItem(QString());
         alghoritmsCryptComboBox->addItem(QString());
         alghoritmsCryptComboBox->addItem(QString());
         alghoritmsCryptComboBox->addItem(QString());
@@ -208,44 +202,6 @@ public:
 "    color: #9e9e9e;\n"
 "    font-size: 14px;\n"
 "}"));
-        generateRSAKeyPushButton = new QPushButton(rsaInfoFrame);
-        generateRSAKeyPushButton->setObjectName("generateRSAKeyPushButton");
-        generateRSAKeyPushButton->setGeometry(QRect(10, 230, 151, 31));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Arial")});
-        font3.setPointSize(12);
-        font3.setBold(true);
-        generateRSAKeyPushButton->setFont(font3);
-        generateRSAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        generateRSAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(60, 187, 255);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(103, 255, 245);\n"
-"}"));
-        clearRSAKeysPushButton = new QPushButton(rsaInfoFrame);
-        clearRSAKeysPushButton->setObjectName("clearRSAKeysPushButton");
-        clearRSAKeysPushButton->setGeometry(QRect(170, 230, 121, 31));
-        clearRSAKeysPushButton->setFont(font3);
-        clearRSAKeysPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        clearRSAKeysPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(255, 57, 60);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(255, 105, 108);\n"
-"}"));
         timeToCrypt = new QLabel(centralwidget);
         timeToCrypt->setObjectName("timeToCrypt");
         timeToCrypt->setGeometry(QRect(10, 690, 1181, 31));
@@ -270,10 +226,10 @@ public:
         encryptDataPlainTextEdit = new QPlainTextEdit(centralwidget);
         encryptDataPlainTextEdit->setObjectName("encryptDataPlainTextEdit");
         encryptDataPlainTextEdit->setGeometry(QRect(10, 320, 581, 321));
-        QFont font4;
-        font4.setFamilies({QString::fromUtf8("Arial")});
-        font4.setPointSize(12);
-        encryptDataPlainTextEdit->setFont(font4);
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Arial")});
+        font3.setPointSize(12);
+        encryptDataPlainTextEdit->setFont(font3);
         encryptDataPlainTextEdit->setStyleSheet(QString::fromUtf8("QPlainTextEdit\n"
 "{\n"
 " border: none;\n"
@@ -381,7 +337,7 @@ public:
         decryptDataPlainTextEdit = new QPlainTextEdit(centralwidget);
         decryptDataPlainTextEdit->setObjectName("decryptDataPlainTextEdit");
         decryptDataPlainTextEdit->setGeometry(QRect(600, 320, 591, 321));
-        decryptDataPlainTextEdit->setFont(font4);
+        decryptDataPlainTextEdit->setFont(font3);
         decryptDataPlainTextEdit->setStyleSheet(QString::fromUtf8("QPlainTextEdit\n"
 "{\n"
 " border: none;\n"
@@ -497,11 +453,11 @@ public:
         formatHEXCheckBox = new QCheckBox(centralwidget);
         formatHEXCheckBox->setObjectName("formatHEXCheckBox");
         formatHEXCheckBox->setGeometry(QRect(350, 280, 61, 31));
-        QFont font5;
-        font5.setFamilies({QString::fromUtf8("Arial")});
-        font5.setPointSize(12);
-        font5.setBold(false);
-        formatHEXCheckBox->setFont(font5);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Arial")});
+        font4.setPointSize(12);
+        font4.setBold(false);
+        formatHEXCheckBox->setFont(font4);
         formatHEXCheckBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         formatHEXCheckBox->setStyleSheet(QString::fromUtf8("QCheckBox \n"
 "{\n"
@@ -537,7 +493,7 @@ public:
         formatBase64CheckBox = new QCheckBox(centralwidget);
         formatBase64CheckBox->setObjectName("formatBase64CheckBox");
         formatBase64CheckBox->setGeometry(QRect(420, 280, 91, 31));
-        formatBase64CheckBox->setFont(font4);
+        formatBase64CheckBox->setFont(font3);
         formatBase64CheckBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         formatBase64CheckBox->setStyleSheet(QString::fromUtf8("QCheckBox \n"
 "{\n"
@@ -605,40 +561,6 @@ public:
 "    font-size: 14px;\n"
 "}"));
         secretKeyXTEALineEdit->setMaxLength(32);
-        generateXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
-        generateXTEAKeyPushButton->setObjectName("generateXTEAKeyPushButton");
-        generateXTEAKeyPushButton->setGeometry(QRect(10, 230, 151, 31));
-        generateXTEAKeyPushButton->setFont(font3);
-        generateXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        generateXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(60, 187, 255);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(103, 255, 245);\n"
-"}"));
-        clearXTEAKeyPushButton = new QPushButton(xteaInfoFrame);
-        clearXTEAKeyPushButton->setObjectName("clearXTEAKeyPushButton");
-        clearXTEAKeyPushButton->setGeometry(QRect(170, 230, 121, 31));
-        clearXTEAKeyPushButton->setFont(font3);
-        clearXTEAKeyPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        clearXTEAKeyPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(255, 57, 60);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(255, 105, 108);\n"
-"}"));
         aesInfoFrame = new QFrame(centralwidget);
         aesInfoFrame->setObjectName("aesInfoFrame");
         aesInfoFrame->setGeometry(QRect(190, 0, 1001, 271));
@@ -704,49 +626,15 @@ public:
 "    font-size: 14px;\n"
 "}"));
         secretKeyLineEdit->setMaxLength(32);
-        generateAESKeyAndIVPushButton = new QPushButton(aesInfoFrame);
-        generateAESKeyAndIVPushButton->setObjectName("generateAESKeyAndIVPushButton");
-        generateAESKeyAndIVPushButton->setGeometry(QRect(10, 230, 151, 31));
-        generateAESKeyAndIVPushButton->setFont(font3);
-        generateAESKeyAndIVPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        generateAESKeyAndIVPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(60, 187, 255);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(103, 255, 245);\n"
-"}"));
-        clearAESKeyAndIVPushButton = new QPushButton(aesInfoFrame);
-        clearAESKeyAndIVPushButton->setObjectName("clearAESKeyAndIVPushButton");
-        clearAESKeyAndIVPushButton->setGeometry(QRect(170, 230, 121, 31));
-        clearAESKeyAndIVPushButton->setFont(font3);
-        clearAESKeyAndIVPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        clearAESKeyAndIVPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"	background-color: rgb(255, 57, 60);\n"
-"	color: white;\n"
-"	border: none;\n"
-"	border-radius: 15px;\n"
-"}\n"
-"\n"
-"QPushButton::hover\n"
-"{\n"
-"	background-color: rgb(255, 105, 108);\n"
-"}"));
-        sizeSecretKetQComboBox = new QComboBox(aesInfoFrame);
-        sizeSecretKetQComboBox->addItem(QString());
-        sizeSecretKetQComboBox->addItem(QString());
-        sizeSecretKetQComboBox->addItem(QString());
-        sizeSecretKetQComboBox->setObjectName("sizeSecretKetQComboBox");
-        sizeSecretKetQComboBox->setGeometry(QRect(250, 125, 171, 41));
-        sizeSecretKetQComboBox->setFont(font);
-        sizeSecretKetQComboBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        sizeSecretKetQComboBox->setStyleSheet(QString::fromUtf8("QComboBox \n"
+        sizeSecretKeyQComboBox = new QComboBox(aesInfoFrame);
+        sizeSecretKeyQComboBox->addItem(QString());
+        sizeSecretKeyQComboBox->addItem(QString());
+        sizeSecretKeyQComboBox->addItem(QString());
+        sizeSecretKeyQComboBox->setObjectName("sizeSecretKeyQComboBox");
+        sizeSecretKeyQComboBox->setGeometry(QRect(250, 125, 171, 41));
+        sizeSecretKeyQComboBox->setFont(font);
+        sizeSecretKeyQComboBox->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        sizeSecretKeyQComboBox->setStyleSheet(QString::fromUtf8("QComboBox \n"
 "{\n"
 "    border: none;\n"
 "    border-bottom: 2px solid #e0e0e0;\n"
@@ -841,6 +729,44 @@ public:
 "    padding: 8px;\n"
 "    border-radius: 4px;\n"
 "}"));
+        generateKeysDataPushButton = new QPushButton(centralwidget);
+        generateKeysDataPushButton->setObjectName("generateKeysDataPushButton");
+        generateKeysDataPushButton->setGeometry(QRect(600, 280, 151, 31));
+        QFont font5;
+        font5.setFamilies({QString::fromUtf8("Arial")});
+        font5.setPointSize(12);
+        font5.setBold(true);
+        generateKeysDataPushButton->setFont(font5);
+        generateKeysDataPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        generateKeysDataPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	background-color: rgb(60, 187, 255);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	background-color: rgb(103, 255, 245);\n"
+"}"));
+        clearKeysDataPushButton = new QPushButton(centralwidget);
+        clearKeysDataPushButton->setObjectName("clearKeysDataPushButton");
+        clearKeysDataPushButton->setGeometry(QRect(760, 280, 121, 31));
+        clearKeysDataPushButton->setFont(font5);
+        clearKeysDataPushButton->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        clearKeysDataPushButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	background-color: rgb(255, 57, 60);\n"
+"	color: white;\n"
+"	border: none;\n"
+"	border-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton::hover\n"
+"{\n"
+"	background-color: rgb(255, 105, 108);\n"
+"}"));
         ClientInterface->setCentralWidget(centralwidget);
         menubar = new QMenuBar(ClientInterface);
         menubar->setObjectName("menubar");
@@ -859,18 +785,14 @@ public:
     {
         ClientInterface->setWindowTitle(QCoreApplication::translate("ClientInterface", "\320\250\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\320\265", nullptr));
         alghoritmsCryptComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "AES", nullptr));
-        alghoritmsCryptComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "Blowfish", nullptr));
-        alghoritmsCryptComboBox->setItemText(2, QCoreApplication::translate("ClientInterface", "DES", nullptr));
-        alghoritmsCryptComboBox->setItemText(3, QCoreApplication::translate("ClientInterface", "RSA", nullptr));
-        alghoritmsCryptComboBox->setItemText(4, QCoreApplication::translate("ClientInterface", "XTEA", nullptr));
+        alghoritmsCryptComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "RSA", nullptr));
+        alghoritmsCryptComboBox->setItemText(2, QCoreApplication::translate("ClientInterface", "XTEA", nullptr));
 
         toCryptPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\227\320\260\321\210\320\270\321\204\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
         openKeyLabel->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\202\320\272\321\200\321\213\321\202\321\213\320\271 \320\272\320\273\321\216\321\207:", nullptr));
         closeKeyLabel->setText(QCoreApplication::translate("ClientInterface", "\320\227\320\260\320\272\321\200\321\213\321\202\321\213\320\271 \320\272\320\273\321\216\321\207:", nullptr));
         openKeyRSALineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
         closeKeyRSALineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
-        generateRSAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
-        clearRSAKeysPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
         timeToCrypt->setText(QCoreApplication::translate("ClientInterface", "\320\222\321\200\320\265\320\274\321\217 \321\210\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\321\217:", nullptr));
         fromCryptPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\240\320\260\321\201\321\210\320\270\321\204\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
         encryptDataPlainTextEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "\320\242\320\265\320\272\321\201\321\202 \320\264\320\273\321\217 \321\210\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\321\217 (\320\244\320\276\321\200\320\274\320\260\321\202 UTF-8)", nullptr));
@@ -880,23 +802,21 @@ public:
         formatBase64CheckBox->setText(QCoreApplication::translate("ClientInterface", "Base64", nullptr));
         secretKeyLabel_4->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\265\320\272\321\200\320\265\321\202\320\275\321\213\320\271 \320\272\320\273\321\216\321\207: ", nullptr));
         secretKeyXTEALineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
-        generateXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
-        clearXTEAKeyPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
         IVLabel->setText(QCoreApplication::translate("ClientInterface", "\320\222\320\265\320\272\321\202\320\276\321\200 \320\270\320\275\320\270\321\206\320\270\320\260\320\273\320\270\320\267\320\260\321\206\320\270\320\270:", nullptr));
         secretKeyLabel->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\265\320\272\321\200\320\265\321\202\320\275\321\213\320\271 \320\272\320\273\321\216\321\207: ", nullptr));
         IVLineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202 (\320\235\320\265\320\276\320\261\321\217\320\267\320\260\321\202\320\265\320\273\321\214\320\275\320\276)", nullptr));
         secretKeyLineEdit->setPlaceholderText(QCoreApplication::translate("ClientInterface", "HEX \321\204\320\276\321\200\320\274\320\260\321\202", nullptr));
-        generateAESKeyAndIVPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
-        clearAESKeyAndIVPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
-        sizeSecretKetQComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "128 Bit", nullptr));
-        sizeSecretKetQComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "192 Bit", nullptr));
-        sizeSecretKetQComboBox->setItemText(2, QCoreApplication::translate("ClientInterface", "256 Bit", nullptr));
+        sizeSecretKeyQComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "128 Bit", nullptr));
+        sizeSecretKeyQComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "192 Bit", nullptr));
+        sizeSecretKeyQComboBox->setItemText(2, QCoreApplication::translate("ClientInterface", "256 Bit", nullptr));
 
         secretKeyLabel_2->setText(QCoreApplication::translate("ClientInterface", "\320\240\320\260\320\267\320\274\320\265\321\200 \320\272\320\273\321\216\321\207\320\260: ", nullptr));
         secretKeyLabel_3->setText(QCoreApplication::translate("ClientInterface", "\320\240\320\265\320\266\320\270\320\274 \321\210\320\270\321\204\321\200\320\276\320\262\320\260\320\275\320\270\321\217: ", nullptr));
         operationModeQComboBox->setItemText(0, QCoreApplication::translate("ClientInterface", "ECB", nullptr));
         operationModeQComboBox->setItemText(1, QCoreApplication::translate("ClientInterface", "CBC", nullptr));
 
+        generateKeysDataPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\241\320\263\320\265\320\275\320\265\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214", nullptr));
+        clearKeysDataPushButton->setText(QCoreApplication::translate("ClientInterface", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 
 };
