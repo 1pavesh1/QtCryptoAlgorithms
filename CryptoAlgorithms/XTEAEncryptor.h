@@ -57,7 +57,7 @@ private:
 public:
     XTEAEncryptor() { rounds = 32; }
 
-    QByteArray EncryptMsg(const QByteArray& data, const QByteArray& key)
+    QByteArray EncryptMsg(const QByteArray& data, const QByteArray& key) override
     {
         uchar head = 0;
         QByteArray tempData = data;
@@ -76,7 +76,7 @@ public:
         return tempData;
     }
 
-    QByteArray DecryptMsg(const QByteArray& data, const QByteArray& key)
+    QByteArray DecryptMsg(const QByteArray& data, const QByteArray& key) override
     {
         QByteArray tempData = data;
         Decrypt((uchar*)tempData.data(), tempData.size(), (uchar*)key.data());

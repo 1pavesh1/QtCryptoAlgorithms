@@ -7,13 +7,13 @@
 class RSAEncryptor : public CryptoAlgorithm
 {
 public:
-    QByteArray EncryptMsg(const QByteArray &message, const QByteArray &publicKey)
+    QByteArray EncryptMsg(const QByteArray &message, const QByteArray &publicKey) override
     {
         QRSAEncryption RSAEncryption(QRSAEncryption::Rsa::RSA_2048);
         return RSAEncryption.encode(message, QByteArray::fromHex(publicKey));
     }
 
-    QByteArray DecryptMsg(const QByteArray &message, const QByteArray &privateKey)
+    QByteArray DecryptMsg(const QByteArray &message, const QByteArray &privateKey) override
     {
         QRSAEncryption RSAEncryption(QRSAEncryption::Rsa::RSA_2048);
         return RSAEncryption.decode(message, QByteArray::fromHex(privateKey));

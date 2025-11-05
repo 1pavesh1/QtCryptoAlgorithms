@@ -128,7 +128,13 @@ void ClientInterface::DecryptMsg(const QByteArray &message)
 
 void ClientInterface::EncryptAES(const QByteArray &message)
 {
-
+    aesEncryptor.SetInitVector(ui->IVLineEdit->text().trimmed().toUtf8());
+    QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
+    QByteArray encryptMsg = aesEncryptor.EncryptMsg(message, key);
+    if (ui->formatHEXCheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
+    else if (ui->formatBase64CheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
 }
 
 void ClientInterface::EncryptRSA(const QByteArray &message)
@@ -153,7 +159,13 @@ void ClientInterface::EncryptXTEA(const QByteArray &message)
 
 void ClientInterface::DecryptAES(const QByteArray &message)
 {
-
+    QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
+    QByteArray decryptMsg;
+    if (ui->formatHEXCheckBox->isChecked())
+        decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromHex(message), key);
+    else if (ui->formatBase64CheckBox->isChecked())
+        decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromBase64(message), key);
+    ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 
 void ClientInterface::DecryptRSA(const QByteArray &message)
@@ -313,4 +325,3 @@ void ClientInterface::on_operationModeQComboBox_currentIndexChanged(int index)
         break;
     }
 }
-
