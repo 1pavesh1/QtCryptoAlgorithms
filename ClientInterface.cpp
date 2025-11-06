@@ -11,6 +11,8 @@ ClientInterface::ClientInterface(QWidget *parent)
 
 ClientInterface::~ClientInterface()
 {
+    if (messageWidget)
+        delete messageWidget;
     delete ui;
 }
 
@@ -160,67 +162,59 @@ void ClientInterface::DecryptMsg(const QByteArray &message)
     }
 }
 
-void ClientInterface::EncryptAES(const QByteArray &message)
+void ClientInterface::SetFormatEncryptText(const QByteArray &encryptMsg)
 {
-    aesEncryptor.SetInitVector(ui->IVLineEdit->text().trimmed().toUtf8());
-    QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
-    QByteArray encryptMsg = aesEncryptor.EncryptMsg(message, key);
     if (ui->formatHEXCheckBox->isChecked())
         ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
     else if (ui->formatBase64CheckBox->isChecked())
         ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
+}
+
+QByteArray ClientInterface::ParseDecryptText(const QByteArray &message)
+{
+    if (ui->formatHEXCheckBox->isChecked())
+        return QByteArray::fromHex(message);
+    else if (ui->formatBase64CheckBox->isChecked())
+        return QByteArray::fromBase64(message);
+}
+
+void ClientInterface::EncryptAES(const QByteArray &message)
+{
+    aesEncryptor.SetInitVector(ui->IVLineEdit->text().trimmed().toUtf8());
+    QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
+    SetFormatEncryptText(aesEncryptor.EncryptMsg(message, key));
 }
 
 void ClientInterface::EncryptRSA(const QByteArray &message)
 {
     QByteArray publicKey = ui->openKeyRSALineEdit->text().trimmed().toUtf8();
-    QByteArray encryptMsg = rsaEncryptor.EncryptMsg(message, publicKey);
-    if (ui->formatHEXCheckBox->isChecked())
-        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
-    else if (ui->formatBase64CheckBox->isChecked())
-        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
+    SetFormatEncryptText(rsaEncryptor.EncryptMsg(message, publicKey));
 }
 
 void ClientInterface::EncryptXTEA(const QByteArray &message)
 {
     QByteArray secretKey = ui->secretKeyXTEALineEdit->text().trimmed().toUtf8();
-    QByteArray encryptMsg = xteaEncryptor.EncryptMsg(message, secretKey);
-    if (ui->formatHEXCheckBox->isChecked())
-        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
-    else if (ui->formatBase64CheckBox->isChecked())
-        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
+    SetFormatEncryptText(xteaEncryptor.EncryptMsg(message, secretKey));
 }
 
 void ClientInterface::DecryptAES(const QByteArray &message)
 {
     QByteArray key = ui->secretKeyLineEdit->text().trimmed().toUtf8();
-    QByteArray decryptMsg;
-    if (ui->formatHEXCheckBox->isChecked())
-        decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromHex(message), key);
-    else if (ui->formatBase64CheckBox->isChecked())
-        decryptMsg = aesEncryptor.DecryptMsg(QByteArray::fromBase64(message), key);
+    QByteArray decryptMsg = aesEncryptor.DecryptMsg(ParseDecryptText(message), key);
     ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 
 void ClientInterface::DecryptRSA(const QByteArray &message)
 {
     QByteArray privateKey = ui->closeKeyRSALineEdit->text().trimmed().toUtf8();
-    QByteArray decryptMsg;
-    if (ui->formatHEXCheckBox->isChecked())
-        decryptMsg = rsaEncryptor.DecryptMsg(QByteArray::fromHex(message), privateKey);
-    else if (ui->formatBase64CheckBox->isChecked())
-        decryptMsg = rsaEncryptor.DecryptMsg(QByteArray::fromBase64(message), privateKey);
+    QByteArray decryptMsg = rsaEncryptor.DecryptMsg(ParseDecryptText(message), privateKey);
     ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 
 void ClientInterface::DecryptXTEA(const QByteArray &message)
 {
     QByteArray secretKey = ui->secretKeyXTEALineEdit->text().trimmed().toUtf8();
-    QByteArray decryptMsg;
-    if (ui->formatHEXCheckBox->isChecked())
-        decryptMsg = xteaEncryptor.DecryptMsg(QByteArray::fromHex(message), secretKey);
-    else if (ui->formatBase64CheckBox->isChecked())
-        decryptMsg = xteaEncryptor.DecryptMsg(QByteArray::fromBase64(message), secretKey);
+    QByteArray decryptMsg = xteaEncryptor.DecryptMsg(ParseDecryptText(message), secretKey);
     ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 

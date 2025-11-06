@@ -3,6 +3,8 @@ project(QtCryptoAlgorithms LANGUAGES CXX)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
+set(CMAKE_AUTORCC ON)
+
 qt_standard_project_setup()
 
 qt_add_executable(QtCryptoAlgorithms
@@ -29,8 +31,6 @@ qt_add_executable(QtCryptoAlgorithms
     Validator/ValidatorInputText.h
     Constants/CryptographicConstants.h
     IconWarningMessage.qrc
-
-
 )
 
 include(GNUInstallDirs)

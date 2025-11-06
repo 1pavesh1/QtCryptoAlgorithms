@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="IconWarningMessage.qrc">D:/Qt projects/QtCryptoAlgorithms/IconWarningMessage.qrc</file>
+  </qresource>
+</RCC>
+

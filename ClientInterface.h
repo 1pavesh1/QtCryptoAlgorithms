@@ -36,6 +36,8 @@ private:
 
     void UpdateInterfaceFrame(const TypeAlgorithm &typeAlghorithm);
     void ClearInterfaceFrame();
+    void SetFormatEncryptText(const QByteArray &encryptMsg);
+    QByteArray ParseDecryptText(const QByteArray &message);
 
     void EncryptMsg(const QByteArray &message);
     void DecryptMsg(const QByteArray &message);

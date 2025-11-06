@@ -343,7 +343,8 @@
 		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindGit.cmake",
 		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
 		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake",
-		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in"
+		"D:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in",
+		"D:/Qt projects/QtCryptoAlgorithms/IconWarningMessage.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/Qt projects/QtCryptoAlgorithms",
 	"CROSS_CONFIG" : false,

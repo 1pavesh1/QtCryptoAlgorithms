@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/IconWarningMessage.qrc">
+    <file alias="ErrorPin48x48.png">D:/Qt projects/QtCryptoAlgorithms/ErrorPin48x48.png</file>
+    <file alias="InformationPin48x48.png">D:/Qt projects/QtCryptoAlgorithms/InformationPin48x48.png</file>
+    <file alias="SuccessPin48x48.png">D:/Qt projects/QtCryptoAlgorithms/SuccessPin48x48.png</file>
+    <file alias="WarningPin48x48.png">D:/Qt projects/QtCryptoAlgorithms/WarningPin48x48.png</file>
+  </qresource>
+</RCC>
+

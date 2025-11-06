@@ -13,6 +13,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeAlgorithm.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeCiphertext.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/IconWarningMessage.qrc \
 	D:/Qt\ projects/QtCryptoAlgorithms/Singleton/GeneratorDataCrypt.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Validator/ValidatorInputText.h \
