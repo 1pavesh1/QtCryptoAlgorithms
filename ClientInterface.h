@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QByteArray>
+#include <QList>
+#include <QLineEdit>
+#include "Validator/ValidatorInputText.h"
 #include "Singleton/GeneratorDataCrypt.h"
 #include "CustomWidgets/MessageWidget.h"
 #include "Enum/TypeAlgorithm.h"
@@ -23,14 +26,15 @@ class ClientInterface : public QMainWindow
 private:
     Ui::ClientInterface *ui;
     MessageWidget       *messageWidget;
-    TypeAlghorithm      typeAlghorithm = AES;
+    TypeAlgorithm      typeAlghorithm = AES;
     TimerOfSpeed        timer;
+    QList <QLineEdit*> inputTextList;
 
     AESEncryptor        aesEncryptor;
     RSAEncryptor        rsaEncryptor;
     XTEAEncryptor       xteaEncryptor;
 
-    void UpdateInterfaceFrame(const TypeAlghorithm &typeAlghorithm);
+    void UpdateInterfaceFrame(const TypeAlgorithm &typeAlghorithm);
     void ClearInterfaceFrame();
 
     void EncryptMsg(const QByteArray &message);

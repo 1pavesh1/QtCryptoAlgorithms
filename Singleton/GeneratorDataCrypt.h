@@ -5,11 +5,7 @@
 #include <QRandomGenerator>
 #include <QCryptographicHash>
 #include <qrsaencryption.h>
-
-constexpr const qint16 IV_SIZE = 32;
-constexpr const qint16 KEY_128_SIZE = 32;
-constexpr const qint16 KEY_192_SIZE = 48;
-constexpr const qint16 KEY_256_SIZE = 64;
+#include "../Constants/CryptographicConstants.h"
 
 class GeneratorDataCrypt
 {
@@ -25,10 +21,10 @@ public:
 
     QByteArray Generate128BitKey()
     {
-        QByteArray key(KEY_128_SIZE, 0);
+        QByteArray key(CryptoConstants::KeySize::KEY_128, 0);
         QRandomGenerator *generator = QRandomGenerator::system();
 
-        for (int i = 0; i < KEY_128_SIZE; ++i)
+        for (int i = 0; i < CryptoConstants::KeySize::KEY_128; ++i)
         {
             key[i] = static_cast<char>(generator->generate() & 0xFF);
         }
@@ -38,10 +34,10 @@ public:
 
     QByteArray Generate192BitKey()
     {
-        QByteArray key(KEY_192_SIZE, 0);
+        QByteArray key(CryptoConstants::KeySize::KEY_192, 0);
         QRandomGenerator *generator = QRandomGenerator::system();
 
-        for (int i = 0; i < KEY_192_SIZE; ++i)
+        for (int i = 0; i < CryptoConstants::KeySize::KEY_192; ++i)
         {
             key[i] = static_cast<char>(generator->generate() & 0xFF);
         }
@@ -51,10 +47,10 @@ public:
 
     QByteArray Generate256BitKey()
     {
-        QByteArray key(KEY_256_SIZE, 0);
+        QByteArray key(CryptoConstants::KeySize::KEY_256, 0);
         QRandomGenerator *generator = QRandomGenerator::system();
 
-        for (int i = 0; i < KEY_256_SIZE; ++i)
+        for (int i = 0; i < CryptoConstants::KeySize::KEY_256; ++i)
         {
             key[i] = static_cast<char>(generator->generate() & 0xFF);
         }
@@ -64,10 +60,10 @@ public:
 
     QByteArray GenerateInitVector()
     {
-        QByteArray iv(IV_SIZE, 0);
+        QByteArray iv(CryptoConstants::IV_SIZE, 0);
         QRandomGenerator *generator = QRandomGenerator::system();
 
-        for (int i = 0; i < IV_SIZE; ++i)
+        for (int i = 0; i < CryptoConstants::IV_SIZE; ++i)
         {
             iv[i] = static_cast<char>(generator->generate() & 0xFF);
         }
@@ -77,7 +73,7 @@ public:
 
     void GenerateRSAKeys(QByteArray &publicKey, QByteArray &privateKey)
     {
-        QRSAEncryption RSAEncryption;
+        QRSAEncryption RSAEncryption(QRSAEncryption::Rsa::RSA_2048);
         RSAEncryption.generatePairKey(publicKey, privateKey);
     }
 

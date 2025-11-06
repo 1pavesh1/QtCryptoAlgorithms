@@ -1,7 +1,7 @@
 #ifndef TYPEALGORITHM_H
 #define TYPEALGORITHM_H
 
-enum TypeAlghorithm
+enum TypeAlgorithm
 {
     AES,
     RSA,

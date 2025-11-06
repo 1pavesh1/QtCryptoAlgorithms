@@ -5,6 +5,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt\ projects/QtCryptoAlgorithms/CMakeLists.txt \
 	D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.cpp \
 	D:/Qt\ projects/QtCryptoAlgorithms/ClientInterface.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/Constants/CryptographicConstants.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/AESEncryptor.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/RSAEncryptor.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/CryptoAlgorithms/XTEAEncryptor.h \
@@ -14,6 +15,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Singleton/GeneratorDataCrypt.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/Timer/TimerOfSpeed.h \
+	D:/Qt\ projects/QtCryptoAlgorithms/Validator/ValidatorInputText.h \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
 	D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
@@ -37,6 +39,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/QPropertyAnimation \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/QRandomGenerator \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/QTimer \
+	D:/Qt/6.9.1/mingw_64/include/QtCore/QtGlobal \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
 	D:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
@@ -205,7 +208,9 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h \
+	D:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h \
+	D:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h \
 	D:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h \
@@ -216,6 +221,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QGraphicsOpacityEffect \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QHBoxLayout \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QLabel \
+	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QLineEdit \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QVBoxLayout \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
@@ -226,6 +232,7 @@ QtCryptoAlgorithms_autogen/timestamp: \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlabel.h \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qlineedit.h \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
 	D:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \

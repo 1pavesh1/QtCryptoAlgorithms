@@ -26,6 +26,10 @@ qt_add_executable(QtCryptoAlgorithms
 
     AbstractClasses/CryptoAlgorithm.h
     Singleton/GeneratorDataCrypt.h
+    Validator/ValidatorInputText.h
+    Constants/CryptographicConstants.h
+    IconWarningMessage.qrc
+
 
 )
 

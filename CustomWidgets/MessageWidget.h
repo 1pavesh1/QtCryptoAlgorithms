@@ -61,22 +61,22 @@ private:
         case TypeMessage::WARNING:
             backgroundColor = "#ffeb3b";
             borderColor = "#ffc107";
-            iconPath = ":/IMG/IMG/WarningPin48x48SN.png";
+            iconPath = ":/IconWarningMessage/IMG/WarningPin48x48.png";
             break;
         case TypeMessage::DANGER:
             backgroundColor = "#ffcdd2";
             borderColor = "#f44336";
-            iconPath = ":/IMG/IMG/ErrorPin48x48SN.png";
+            iconPath = ":/IconWarningMessage/IMG/ErrorPin48x48.png";
             break;
         case TypeMessage::INFORMATION:
             backgroundColor = "#bbdefb";
             borderColor = "#2196f3";
-            iconPath = ":/IMG/IMG/InformationPin48x48SN.png";
+            iconPath = ":/IconWarningMessage/IMG/InformationPin48x48.png";
             break;
         case TypeMessage::SUCCESS:
             backgroundColor = "#c8e6c9";
             borderColor = "#4caf50";
-            iconPath = ":/IMG/IMG/SuccessPin48x48SN.png";
+            iconPath = ":/IconWarningMessage/IMG/SuccessPin48x48.png";
             break;
         }
     }

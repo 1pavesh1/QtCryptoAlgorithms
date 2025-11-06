@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/IconWarningMessage">
+        <file>IMG/ErrorPin48x48.png</file>
+        <file>IMG/InformationPin48x48.png</file>
+        <file>IMG/SuccessPin48x48.png</file>
+        <file>IMG/WarningPin48x48.png</file>
+    </qresource>
+</RCC>

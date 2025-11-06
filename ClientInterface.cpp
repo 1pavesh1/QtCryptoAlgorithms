@@ -33,7 +33,7 @@ void ClientInterface::on_alghoritmsCryptComboBox_currentIndexChanged(int index)
     UpdateInterfaceFrame(typeAlghorithm);
 }
 
-void ClientInterface::UpdateInterfaceFrame(const TypeAlghorithm &typeAlghorithm)
+void ClientInterface::UpdateInterfaceFrame(const TypeAlgorithm &typeAlghorithm)
 {
     ClearInterfaceFrame();
     switch(typeAlghorithm)
@@ -57,72 +57,106 @@ void ClientInterface::ClearInterfaceFrame()
     ui->rsaInfoFrame->setVisible(false);
     ui->aesInfoFrame->setVisible(false);
     ui->xteaInfoFrame->setVisible(false);
+    if (!inputTextList.isEmpty())
+        inputTextList.clear();
 }
 
 void ClientInterface::on_toCryptPushButton_clicked()
 {
-    if (ui->encryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
+    if (ui->formatBase64CheckBox->isChecked() || ui->formatHEXCheckBox->isChecked())
     {
-        messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", INFORMATION);
-        messageWidget->Show();
+        if (ui->encryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
+        {
+            messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", INFORMATION);
+            messageWidget->Show();
+        }
+        else
+        {
+            QByteArray message = ui->encryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
+            EncryptMsg(message);
+        }
     }
     else
     {
-        QByteArray message = ui->encryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
-        EncryptMsg(message);
+        messageWidget = new MessageWidget(this, "Вы не выбрали формат зашифрованного текста", WARNING);
+        messageWidget->Show();
     }
 }
 
 void ClientInterface::on_fromCryptPushButton_clicked()
 {
-    if (ui->decryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
+    if (ui->formatBase64CheckBox->isChecked() || ui->formatHEXCheckBox->isChecked())
     {
-        messageWidget = new MessageWidget(this, "Вы не ввели текст для дешифрования", INFORMATION);
-        messageWidget->Show();
+        if (ui->decryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
+        {
+            messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", INFORMATION);
+            messageWidget->Show();
+        }
+        else
+        {
+            QByteArray message = ui->decryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
+            DecryptMsg(message);
+        }
     }
     else
     {
-        QByteArray message = ui->decryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
-        DecryptMsg(message);
+        messageWidget = new MessageWidget(this, "Вы не выбрали формат зашифрованного текста", WARNING);
+        messageWidget->Show();
     }
 }
 
 void ClientInterface::EncryptMsg(const QByteArray &message)
 {
-    timer.StartTimer();
-    switch(typeAlghorithm)
+    if (ValidatorInputText::ValidateInpuText(inputTextList, typeAlghorithm))
     {
-    case AES:
-        EncryptAES(message);
-        break;
-    case RSA:
-        EncryptRSA(message);
-        break;
-    case XTEA:
-        EncryptXTEA(message);
-        break;
-    default:
-        break;
+        timer.StartTimer();
+        switch(typeAlghorithm)
+        {
+        case AES:
+            EncryptAES(message);
+            break;
+        case RSA:
+            EncryptRSA(message);
+            break;
+        case XTEA:
+            EncryptXTEA(message);
+            break;
+        default:
+            break;
+        }
+        ui->timeToCrypt->setText("Время шифрования: " + QString::number(timer.GetSeconds()) + " миллисекунд");
+        timer.StopTimer();
     }
-    ui->timeToCrypt->setText("Время шифрования: " + QString::number(timer.GetSeconds()) + " миллисекунд");
-    timer.StopTimer();
+    else
+    {
+        messageWidget = new MessageWidget(this, "Неверно введены данные", WARNING);
+        messageWidget->Show();
+    }
 }
 
 void ClientInterface::DecryptMsg(const QByteArray &message)
 {
-    switch(typeAlghorithm)
+    if (ValidatorInputText::ValidateInpuText(inputTextList, typeAlghorithm))
     {
-    case AES:
-        DecryptAES(message);
-        break;
-    case RSA:
-        DecryptRSA(message);
-        break;
-    case XTEA:
-        DecryptXTEA(message);
-        break;
-    default:
-        break;
+        switch(typeAlghorithm)
+        {
+        case AES:
+            DecryptAES(message);
+            break;
+        case RSA:
+            DecryptRSA(message);
+            break;
+        case XTEA:
+            DecryptXTEA(message);
+            break;
+        default:
+            break;
+        }
+    }
+    else
+    {
+        messageWidget = new MessageWidget(this, "Неверно введены данные", WARNING);
+        messageWidget->Show();
     }
 }
 
@@ -213,6 +247,8 @@ void ClientInterface::GenerateRSAData()
     GeneratorDataCrypt::GetInstance()->GenerateRSAKeys(publicKey, privateKey);
     ui->openKeyRSALineEdit->setText(publicKey.toHex());
     ui->closeKeyRSALineEdit->setText(privateKey.toHex());
+    inputTextList.append(ui->openKeyRSALineEdit);
+    inputTextList.append(ui->closeKeyRSALineEdit);
 }
 
 void ClientInterface::GenerateAESData()
@@ -235,12 +271,15 @@ void ClientInterface::GenerateAESData()
     }
     ui->secretKeyLineEdit->setText(secretAESKey.toHex());
     ui->IVLineEdit->setText(IV.toHex());
+    inputTextList.append(ui->IVLineEdit);
+    inputTextList.append(ui->secretKeyLineEdit);
 }
 
 void ClientInterface::GenerateXTEAData()
 {
     QByteArray secretXTEAKey = GeneratorDataCrypt::GetInstance()->Generate128BitKey();
     ui->secretKeyXTEALineEdit->setText(secretXTEAKey.toHex());
+    inputTextList.append(ui->secretKeyXTEALineEdit);
 }
 
 void ClientInterface::on_formatHEXCheckBox_stateChanged(int arg1)
