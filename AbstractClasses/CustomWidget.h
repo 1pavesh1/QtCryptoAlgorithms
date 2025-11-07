@@ -5,6 +5,8 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPixmap>
+#include <QPainter>
+#include <QPainterPath>
 
 class CustomWidget
 {

@@ -3,7 +3,6 @@
 
 #include <QByteArray>
 #include <QRandomGenerator>
-#include <QCryptographicHash>
 #include <qrsaencryption.h>
 #include "../Constants/CryptographicConstants.h"
 

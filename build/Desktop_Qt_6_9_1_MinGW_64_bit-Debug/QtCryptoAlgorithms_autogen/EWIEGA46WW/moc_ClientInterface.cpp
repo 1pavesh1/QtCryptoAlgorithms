@@ -48,10 +48,10 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         "on_alghoritmsCryptComboBox_currentIndexChanged",
         "index",
         "on_sizeSecretKeyQComboBox_currentIndexChanged",
+        "on_operationModeQComboBox_currentIndexChanged",
         "on_formatHEXCheckBox_stateChanged",
         "arg1",
-        "on_formatBase64CheckBox_stateChanged",
-        "on_operationModeQComboBox_currentIndexChanged"
+        "on_formatBase64CheckBox_stateChanged"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -71,17 +71,17 @@ template <> constexpr inline auto ClientInterface::qt_create_metaobjectdata<qt_m
         QtMocHelpers::SlotData<void(int)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { QMetaType::Int, 7 },
         }}),
-        // Slot 'on_formatHEXCheckBox_stateChanged'
+        // Slot 'on_operationModeQComboBox_currentIndexChanged'
         QtMocHelpers::SlotData<void(int)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
+            { QMetaType::Int, 7 },
+        }}),
+        // Slot 'on_formatHEXCheckBox_stateChanged'
+        QtMocHelpers::SlotData<void(int)>(10, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 11 },
         }}),
         // Slot 'on_formatBase64CheckBox_stateChanged'
-        QtMocHelpers::SlotData<void(int)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 10 },
-        }}),
-        // Slot 'on_operationModeQComboBox_currentIndexChanged'
         QtMocHelpers::SlotData<void(int)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 7 },
+            { QMetaType::Int, 11 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -112,9 +112,9 @@ void ClientInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 3: _t->on_clearKeysDataPushButton_clicked(); break;
         case 4: _t->on_alghoritmsCryptComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 5: _t->on_sizeSecretKeyQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 6: _t->on_formatHEXCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 7: _t->on_formatBase64CheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 8: _t->on_operationModeQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 6: _t->on_operationModeQComboBox_currentIndexChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 7: _t->on_formatHEXCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->on_formatBase64CheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }

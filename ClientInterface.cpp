@@ -11,28 +11,15 @@ ClientInterface::ClientInterface(QWidget *parent)
 
 ClientInterface::~ClientInterface()
 {
-    if (messageWidget)
-        delete messageWidget;
     delete ui;
 }
 
-void ClientInterface::on_alghoritmsCryptComboBox_currentIndexChanged(int index)
+QByteArray ClientInterface::ParseDecryptText(const QByteArray &message)
 {
-    switch(index)
-    {
-    case 0:
-        typeAlghorithm = AES;
-        break;
-    case 1:
-        typeAlghorithm = RSA;
-        break;
-    case 2:
-        typeAlghorithm = XTEA;
-        break;
-    default:
-        break;
-    }
-    UpdateInterfaceFrame(typeAlghorithm);
+    if (ui->formatHEXCheckBox->isChecked())
+        return QByteArray::fromHex(message);
+    else if (ui->formatBase64CheckBox->isChecked())
+        return QByteArray::fromBase64(message);
 }
 
 void ClientInterface::UpdateInterfaceFrame(const TypeAlgorithm &typeAlghorithm)
@@ -63,48 +50,12 @@ void ClientInterface::ClearInterfaceFrame()
         inputTextList.clear();
 }
 
-void ClientInterface::on_toCryptPushButton_clicked()
+void ClientInterface::SetFormatEncryptText(const QByteArray &encryptMsg)
 {
-    if (ui->formatBase64CheckBox->isChecked() || ui->formatHEXCheckBox->isChecked())
-    {
-        if (ui->encryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
-        {
-            messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", INFORMATION);
-            messageWidget->Show();
-        }
-        else
-        {
-            QByteArray message = ui->encryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
-            EncryptMsg(message);
-        }
-    }
-    else
-    {
-        messageWidget = new MessageWidget(this, "Вы не выбрали формат зашифрованного текста", WARNING);
-        messageWidget->Show();
-    }
-}
-
-void ClientInterface::on_fromCryptPushButton_clicked()
-{
-    if (ui->formatBase64CheckBox->isChecked() || ui->formatHEXCheckBox->isChecked())
-    {
-        if (ui->decryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
-        {
-            messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", INFORMATION);
-            messageWidget->Show();
-        }
-        else
-        {
-            QByteArray message = ui->decryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
-            DecryptMsg(message);
-        }
-    }
-    else
-    {
-        messageWidget = new MessageWidget(this, "Вы не выбрали формат зашифрованного текста", WARNING);
-        messageWidget->Show();
-    }
+    if (ui->formatHEXCheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
+    else if (ui->formatBase64CheckBox->isChecked())
+        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
 }
 
 void ClientInterface::EncryptMsg(const QByteArray &message)
@@ -162,22 +113,6 @@ void ClientInterface::DecryptMsg(const QByteArray &message)
     }
 }
 
-void ClientInterface::SetFormatEncryptText(const QByteArray &encryptMsg)
-{
-    if (ui->formatHEXCheckBox->isChecked())
-        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toHex());
-    else if (ui->formatBase64CheckBox->isChecked())
-        ui->decryptDataPlainTextEdit->setPlainText(encryptMsg.toBase64());
-}
-
-QByteArray ClientInterface::ParseDecryptText(const QByteArray &message)
-{
-    if (ui->formatHEXCheckBox->isChecked())
-        return QByteArray::fromHex(message);
-    else if (ui->formatBase64CheckBox->isChecked())
-        return QByteArray::fromBase64(message);
-}
-
 void ClientInterface::EncryptAES(const QByteArray &message)
 {
     aesEncryptor.SetInitVector(ui->IVLineEdit->text().trimmed().toUtf8());
@@ -218,31 +153,21 @@ void ClientInterface::DecryptXTEA(const QByteArray &message)
     ui->encryptDataPlainTextEdit->setPlainText(decryptMsg);
 }
 
-void ClientInterface::ClearRSAData()
-{
-    ui->closeKeyRSALineEdit->clear();
-    ui->openKeyRSALineEdit->clear();
-}
-
 void ClientInterface::ClearAESData()
 {
     ui->secretKeyLineEdit->clear();
     ui->IVLineEdit->clear();
 }
 
+void ClientInterface::ClearRSAData()
+{
+    ui->closeKeyRSALineEdit->clear();
+    ui->openKeyRSALineEdit->clear();
+}
+
 void ClientInterface::ClearXTEAData()
 {
     ui->secretKeyXTEALineEdit->clear();
-}
-
-void ClientInterface::GenerateRSAData()
-{
-    QByteArray publicKey, privateKey;
-    GeneratorDataCrypt::GetInstance()->GenerateRSAKeys(publicKey, privateKey);
-    ui->openKeyRSALineEdit->setText(publicKey.toHex());
-    ui->closeKeyRSALineEdit->setText(privateKey.toHex());
-    inputTextList.append(ui->openKeyRSALineEdit);
-    inputTextList.append(ui->closeKeyRSALineEdit);
 }
 
 void ClientInterface::GenerateAESData()
@@ -269,6 +194,17 @@ void ClientInterface::GenerateAESData()
     inputTextList.append(ui->secretKeyLineEdit);
 }
 
+
+void ClientInterface::GenerateRSAData()
+{
+    QByteArray publicKey, privateKey;
+    GeneratorDataCrypt::GetInstance()->GenerateRSAKeys(publicKey, privateKey);
+    ui->openKeyRSALineEdit->setText(publicKey.toHex());
+    ui->closeKeyRSALineEdit->setText(privateKey.toHex());
+    inputTextList.append(ui->openKeyRSALineEdit);
+    inputTextList.append(ui->closeKeyRSALineEdit);
+}
+
 void ClientInterface::GenerateXTEAData()
 {
     QByteArray secretXTEAKey = GeneratorDataCrypt::GetInstance()->Generate128BitKey();
@@ -276,36 +212,47 @@ void ClientInterface::GenerateXTEAData()
     inputTextList.append(ui->secretKeyXTEALineEdit);
 }
 
-void ClientInterface::on_formatHEXCheckBox_stateChanged(int arg1)
+void ClientInterface::on_toCryptPushButton_clicked()
 {
-    if (arg1 == Qt::Checked)
-        ui->formatBase64CheckBox->setChecked(false);
-}
-
-void ClientInterface::on_formatBase64CheckBox_stateChanged(int arg1)
-{
-    if (arg1 == Qt::Checked)
-        ui->formatHEXCheckBox->setChecked(false);
-}
-
-void ClientInterface::on_sizeSecretKeyQComboBox_currentIndexChanged(int index)
-{
-    switch (index)
+    if (ui->formatBase64CheckBox->isChecked() || ui->formatHEXCheckBox->isChecked())
     {
-    case 0:
-        aesEncryptor.sizeKeyAES = bit128;
-        ui->secretKeyLineEdit->setMaxLength(32);
-        break;
-    case 1:
-        aesEncryptor.sizeKeyAES = bit192;
-        ui->secretKeyLineEdit->setMaxLength(48);
-        break;
-    case 2:
-        aesEncryptor.sizeKeyAES = bit256;
-        ui->secretKeyLineEdit->setMaxLength(64);
-        break;
-    default:
-        break;
+        if (ui->encryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
+        {
+            messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", WARNING);
+            messageWidget->Show();
+        }
+        else
+        {
+            QByteArray message = ui->encryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
+            EncryptMsg(message);
+        }
+    }
+    else
+    {
+        messageWidget = new MessageWidget(this, "Вы не выбрали формат зашифрованного текста", WARNING);
+        messageWidget->Show();
+    }
+}
+
+void ClientInterface::on_fromCryptPushButton_clicked()
+{
+    if (ui->formatBase64CheckBox->isChecked() || ui->formatHEXCheckBox->isChecked())
+    {
+        if (ui->decryptDataPlainTextEdit->toPlainText().trimmed().isEmpty())
+        {
+            messageWidget = new MessageWidget(this, "Вы не ввели текст для шифрования", WARNING);
+            messageWidget->Show();
+        }
+        else
+        {
+            QByteArray message = ui->decryptDataPlainTextEdit->toPlainText().trimmed().toUtf8();
+            DecryptMsg(message);
+        }
+    }
+    else
+    {
+        messageWidget = new MessageWidget(this, "Вы не выбрали формат зашифрованного текста", WARNING);
+        messageWidget->Show();
     }
 }
 
@@ -344,6 +291,28 @@ void ClientInterface::on_clearKeysDataPushButton_clicked()
         break;
     }
 }
+
+void ClientInterface::on_sizeSecretKeyQComboBox_currentIndexChanged(int index)
+{
+    switch (index)
+    {
+    case 0:
+        aesEncryptor.sizeKeyAES = bit128;
+        ui->secretKeyLineEdit->setMaxLength(32);
+        break;
+    case 1:
+        aesEncryptor.sizeKeyAES = bit192;
+        ui->secretKeyLineEdit->setMaxLength(48);
+        break;
+    case 2:
+        aesEncryptor.sizeKeyAES = bit256;
+        ui->secretKeyLineEdit->setMaxLength(64);
+        break;
+    default:
+        break;
+    }
+}
+
 void ClientInterface::on_operationModeQComboBox_currentIndexChanged(int index)
 {
     switch(index)
@@ -357,4 +326,35 @@ void ClientInterface::on_operationModeQComboBox_currentIndexChanged(int index)
     default:
         break;
     }
+}
+
+void ClientInterface::on_alghoritmsCryptComboBox_currentIndexChanged(int index)
+{
+    switch(index)
+    {
+    case 0:
+        typeAlghorithm = AES;
+        break;
+    case 1:
+        typeAlghorithm = RSA;
+        break;
+    case 2:
+        typeAlghorithm = XTEA;
+        break;
+    default:
+        break;
+    }
+    UpdateInterfaceFrame(typeAlghorithm);
+}
+
+void ClientInterface::on_formatHEXCheckBox_stateChanged(int arg1)
+{
+    if (arg1 == Qt::Checked)
+        ui->formatBase64CheckBox->setChecked(false);
+}
+
+void ClientInterface::on_formatBase64CheckBox_stateChanged(int arg1)
+{
+    if (arg1 == Qt::Checked)
+        ui->formatHEXCheckBox->setChecked(false);
 }

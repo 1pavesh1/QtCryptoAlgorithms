@@ -1,7 +1,6 @@
 #ifndef AESENCRYPTOR_H
 #define AESENCRYPTOR_H
 
-#include <QDebug>
 #include <QCryptographicHash>
 #include "qaesencryption.h"
 #include "../AbstractClasses/CryptoAlgorithm.h"

@@ -1,11 +1,8 @@
 #ifndef MESSAGEWIDGET_H
 #define MESSAGEWIDGET_H
 
-#include <QDebug>
 #include <QWidget>
 #include <QTimer>
-#include <QPainter>
-#include <QPainterPath>
 #include "../AbstractClasses/CustomWidget.h"
 #include "../AbstractClasses/AnimationInterface.h"
 #include "../Enum/TypeMessage.h"
@@ -42,11 +39,6 @@ private:
                                QPoint parentCenter = parentWidget()->rect().center();
                                move(parentCenter.x() - width() / 2, 10);
                            });
-    }
-
-    float opacity() const
-    {
-        return mOpacity;
     }
 
     void setOpacity(float opacity)
@@ -163,6 +155,11 @@ private:
         animation->start();
     }
 
+    float opacity() const
+    {
+        return mOpacity;
+    }
+
 public:
     MessageWidget(QWidget *parent, const QString &message, const TypeMessage &typeMessage)
         : QWidget(parent), message(message), typeMessage(typeMessage)
@@ -192,14 +189,14 @@ public:
     void paintEvent(QPaintEvent *event) override
     {
         Q_UNUSED(event);
-        QPainter painter(this);
+        QPainter        painter(this);
+        QPainterPath    painterPath;
+
+        painterPath.addRoundedRect(rect(), 25, 25);
+
         painter.setRenderHint(QPainter::Antialiasing);
-
-        QPainterPath path;
-        path.addRoundedRect(rect(), 25, 25);
-
-        painter.fillPath(path, QColor(backgroundColor));
-        painter.strokePath(path, QPen(QColor(borderColor)));
+        painter.fillPath(painterPath, QColor(backgroundColor));
+        painter.strokePath(painterPath, QPen(QColor(borderColor)));
     }
 
     void mousePressEvent(QMouseEvent *event) override

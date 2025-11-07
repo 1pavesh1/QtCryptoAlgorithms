@@ -5,14 +5,14 @@
 #include <QByteArray>
 #include <QList>
 #include <QLineEdit>
-#include "Validator/ValidatorInputText.h"
-#include "Singleton/GeneratorDataCrypt.h"
-#include "CustomWidgets/MessageWidget.h"
-#include "Enum/TypeAlgorithm.h"
-#include "Timer/TimerOfSpeed.h"
 #include "CryptoAlgorithms/AESEncryptor.h"
 #include "CryptoAlgorithms/RSAEncryptor.h"
 #include "CryptoAlgorithms/XTEAEncryptor.h"
+#include "CustomWidgets/MessageWidget.h"
+#include "Validator/ValidatorInputText.h"
+#include "Singleton/GeneratorDataCrypt.h"
+#include "Enum/TypeAlgorithm.h"
+#include "Timer/TimerOfSpeed.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -25,19 +25,24 @@ class ClientInterface : public QMainWindow
     Q_OBJECT
 private:
     Ui::ClientInterface *ui;
+
     MessageWidget       *messageWidget;
-    TypeAlgorithm      typeAlghorithm = AES;
+
     TimerOfSpeed        timer;
-    QList <QLineEdit*> inputTextList;
+    TypeAlgorithm       typeAlghorithm = AES;
+
+    QList <QLineEdit*>  inputTextList;
 
     AESEncryptor        aesEncryptor;
     RSAEncryptor        rsaEncryptor;
     XTEAEncryptor       xteaEncryptor;
 
+    QByteArray ParseDecryptText(const QByteArray &message);
+
     void UpdateInterfaceFrame(const TypeAlgorithm &typeAlghorithm);
     void ClearInterfaceFrame();
+
     void SetFormatEncryptText(const QByteArray &encryptMsg);
-    QByteArray ParseDecryptText(const QByteArray &message);
 
     void EncryptMsg(const QByteArray &message);
     void DecryptMsg(const QByteArray &message);
@@ -50,12 +55,12 @@ private:
     void DecryptRSA(const QByteArray &message);
     void DecryptXTEA(const QByteArray &message);
 
-    void ClearRSAData();
     void ClearAESData();
+    void ClearRSAData();
     void ClearXTEAData();
 
-    void GenerateRSAData();
     void GenerateAESData();
+    void GenerateRSAData();
     void GenerateXTEAData();
 
 public:
@@ -71,8 +76,8 @@ private slots:
 
     void on_alghoritmsCryptComboBox_currentIndexChanged(int index);
     void on_sizeSecretKeyQComboBox_currentIndexChanged(int index);
+    void on_operationModeQComboBox_currentIndexChanged(int index);
     void on_formatHEXCheckBox_stateChanged(int arg1);
     void on_formatBase64CheckBox_stateChanged(int arg1);
-    void on_operationModeQComboBox_currentIndexChanged(int index);
 };
 #endif // CLIENTINTERFACE_H

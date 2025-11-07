@@ -3,7 +3,6 @@ D:/Qt\ projects/QtCryptoAlgorithms/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/QtC
   D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/AnimationInterface.h \
   D:/Qt\ projects/QtCryptoAlgorithms/AbstractClasses/CustomWidget.h \
   D:/Qt\ projects/QtCryptoAlgorithms/Enum/TypeMessage.h \
-  D:/Qt/6.9.1/mingw_64/include/QtCore/QDebug \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QPropertyAnimation \
   D:/Qt/6.9.1/mingw_64/include/QtCore/QTimer \
   D:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \

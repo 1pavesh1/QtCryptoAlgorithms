@@ -10,26 +10,33 @@ qt_standard_project_setup()
 qt_add_executable(QtCryptoAlgorithms
     WIN32 MACOSX_BUNDLE
     main.cpp
+
     ClientInterface.cpp
     ClientInterface.h
     ClientInterface.ui
+
     CustomWidgets/MessageWidget.h
-    AbstractClasses/AnimationInterface.h AbstractClasses/CustomWidget.h
+
+    AbstractClasses/AnimationInterface.h
+    AbstractClasses/CustomWidget.h
+    AbstractClasses/CryptoAlgorithm.h
+
     Enum/TypeMessage.h
     Enum/TypeAlgorithm.h
+    Enum/TypeCiphertext.h
 
     CryptoAlgorithms/RSAEncryptor.h
     CryptoAlgorithms/AESEncryptor.h
     CryptoAlgorithms/XTEAEncryptor.h
 
-
     Timer/TimerOfSpeed.h
-    Enum/TypeCiphertext.h
 
-    AbstractClasses/CryptoAlgorithm.h
     Singleton/GeneratorDataCrypt.h
+
     Validator/ValidatorInputText.h
+
     Constants/CryptographicConstants.h
+
     IconWarningMessage.qrc
 )
 
